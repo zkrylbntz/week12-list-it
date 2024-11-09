@@ -1,0 +1,91 @@
+{
+  "recipes": [
+    {
+      "recipe_id": "1",
+      "name": "Classic Margherita Pizza",
+      "ingredients": [
+        { "name": "Pizza dough", "prep": "", "type": "", "amount": "" },
+        { "name": "Tomato sauce", "prep": "", "type": "", "amount": "" },
+        {
+          "name": "Mozzarella cheese",
+          "prep": "fresh",
+          "type": "",
+          "amount": ""
+        },
+        { "name": "Basil", "prep": "fresh", "type": "", "amount": "" },
+        { "name": "Olive oil", "prep": "", "type": "condiment", "amount": "" },
+        {
+          "name": "Salt",
+          "prep": "to taste",
+          "type": "condiment",
+          "amount": ""
+        },
+        {
+          "name": "Pepper",
+          "prep": "to taste",
+          "type": "condiment",
+          "amount": ""
+        }
+      ],
+      "instructions": "Preheat the oven to 475°F (245°C). Roll out the pizza dough and spread tomato sauce evenly. Top with slices of fresh mozzarella and fresh basil leaves. Drizzle with olive oil and season with salt and pepper. Bake in the preheated oven for 12-15 minutes or until the crust is golden brown. Slice and serve hot.",
+      "prep_time": "20",
+      "cook_time": "15",
+      "full_cook_time": "35",
+      "servings": "4",
+      "image": "https://cdn.dummyjson.com/recipe-images/1.webp",
+      "recipe_tags": [
+        "Pizza",
+        "Italian",
+        "Easy",
+        "Dinner",
+        "Vegetarian",
+        "Gluten"
+      ]
+    },
+    {
+      "recipe_id": "2",
+      "name": "Vegetarian Stir-Fry",
+      "ingredients": [
+        { "name": "Tofu", "prep": "cubed", "type": "", "amount": "225 g" },
+        {
+          "name": "Broccoli",
+          "prep": "florets",
+          "type": "",
+          "amount": "200 g"
+        },
+        { "name": "Carrots", "prep": "sliced", "type": "", "amount": "150 g" },
+        { "name": "Bell peppers", "prep": "sliced", "type": "", "amount": "1" },
+        {
+          "name": "Soy sauce",
+          "prep": "",
+          "type": "condiment",
+          "amount": "50 ml"
+        },
+        { "name": "Ginger", "prep": "minced", "type": "", "amount": "1 tbsp" },
+        { "name": "Garlic", "prep": "minced", "type": "", "amount": "1 clove" },
+        {
+          "name": "Sesame oil",
+          "prep": "",
+          "type": "condiment",
+          "amount": "15 ml"
+        },
+        { "name": "Rice", "prep": "cooked", "type": "", "amount": "2 cups" }
+      ],
+      "instructions": "In a wok, heat sesame oil over medium-high heat. Add minced ginger and garlic, sauté until fragrant. Add cubed tofu and stir-fry until golden brown. Add broccoli, carrots, and bell peppers. Cook until vegetables are tender-crisp. Pour soy sauce over the stir-fry and toss to combine. Serve over cooked rice.",
+      "prep_time": "15",
+      "cook_time": "20",
+      "full_cook_time": "35",
+      "servings": "3",
+      "image": "https://cdn.dummyjson.com/recipe-images/2.webp",
+      "recipe_tags": [
+        "Vegetarian",
+        "Vegan",
+        "Stir-fry",
+        "Asian",
+        "Lunch",
+        "Medium",
+        "Gluten"
+      ]
+    }
+  ]
+}

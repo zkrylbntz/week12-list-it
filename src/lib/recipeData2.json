@@ -86,6 +86,417 @@
         "Medium",
         "Gluten"
       ]
+    },
+    {
+      "recipe_id": "3",
+      "name": "Chocolate Chip Cookies",
+      "ingredients": [
+        {
+          "name": "All-purpose flour",
+          "prep": "",
+          "type": "",
+          "amount": "250 g"
+        },
+        { "name": "Butter", "prep": "softened", "type": "", "amount": "200 g" },
+        { "name": "Brown sugar", "prep": "", "type": "", "amount": "100 g" },
+        { "name": "White sugar", "prep": "", "type": "", "amount": "100 g" },
+        { "name": "Eggs", "prep": "", "type": "", "amount": "2 large" },
+        {
+          "name": "Vanilla extract",
+          "prep": "",
+          "type": "",
+          "amount": "1 tsp"
+        },
+        { "name": "Baking soda", "prep": "", "type": "", "amount": "1 tsp" },
+        { "name": "Salt", "prep": "", "type": "", "amount": "1 pinch" },
+        { "name": "Chocolate chips", "prep": "", "type": "", "amount": "200 g" }
+      ],
+      "instructions": "Preheat the oven to 350°F (175°C). In a bowl, cream together softened butter, brown sugar, and white sugar. Beat in eggs one at a time, then stir in vanilla extract. Combine flour, baking soda, and salt. Gradually add to the wet ingredients. Fold in chocolate chips. Drop rounded tablespoons of dough onto ungreased baking sheets. Bake for 10-12 minutes or until edges are golden brown. Allow cookies to cool on the baking sheet for a few minutes before transferring to a wire rack.",
+      "prep_time": "15",
+      "cook_time": "10",
+      "full_cook_time": "25",
+      "servings": "24",
+      "image": "https://cdn.dummyjson.com/recipe-images/3.webp",
+      "recipe_tags": ["Cookies", "Dessert", "Baking", "Snack"]
+    },
+    {
+      "recipe_id": "4",
+      "name": "Chicken Alfredo Pasta",
+      "ingredients": [
+        {
+          "name": "Fettuccine pasta",
+          "prep": "",
+          "type": "",
+          "amount": "200 g"
+        },
+        {
+          "name": "Chicken breast",
+          "prep": "sliced",
+          "type": "",
+          "amount": "300 g"
+        },
+        { "name": "Heavy cream", "prep": "", "type": "", "amount": "150 ml" },
+        {
+          "name": "Parmesan cheese",
+          "prep": "grated",
+          "type": "",
+          "amount": "50 g"
+        },
+        {
+          "name": "Garlic",
+          "prep": "minced",
+          "type": "",
+          "amount": "2 cloves"
+        },
+        { "name": "Butter", "prep": "", "type": "", "amount": "30 g" },
+        {
+          "name": "Salt and pepper",
+          "prep": "to taste",
+          "type": "seasoning",
+          "amount": "1/2 tsp salt, 1/4 tsp pepper"
+        },
+        {
+          "name": "Fresh parsley",
+          "prep": "for garnish",
+          "type": "",
+          "amount": "1 tbsp"
+        }
+      ],
+      "instructions": "Cook fettuccine pasta according to package instructions. In a pan, sauté sliced chicken in butter until fully cooked. Add minced garlic and cook until fragrant. Pour in heavy cream and grated Parmesan cheese. Stir until the cheese is melted. Season with salt and pepper to taste. Combine the Alfredo sauce with cooked pasta. Garnish with fresh parsley before serving.",
+      "prep_time": "15",
+      "cook_time": "20",
+      "full_cook_time": "35",
+      "servings": "4",
+      "image": "https://cdn.dummyjson.com/recipe-images/4.webp",
+      "recipe_tags": ["Pasta", "Chicken", "Lunch", "Dinner"]
+    },
+    {
+      "recipe_id": "5",
+      "name": "Mango Salsa Chicken",
+      "ingredients": [
+        {
+          "name": "Chicken thighs",
+          "prep": "",
+          "type": "",
+          "amount": "4 thighs"
+        },
+        { "name": "Mango", "prep": "diced", "type": "", "amount": "1 mango" },
+        {
+          "name": "Red onion",
+          "prep": "finely chopped",
+          "type": "",
+          "amount": "1 small"
+        },
+        {
+          "name": "Cilantro",
+          "prep": "chopped",
+          "type": "",
+          "amount": "2 tbsp"
+        },
+        { "name": "Lime juice", "prep": "", "type": "", "amount": "2 tbsp" },
+        {
+          "name": "Jalapeño",
+          "prep": "minced",
+          "type": "",
+          "amount": "1 piece"
+        },
+        {
+          "name": "Salt and pepper",
+          "prep": "",
+          "type": "seasoning",
+          "amount": "1/4 tsp salt, 1/8 tsp pepper"
+        },
+        {
+          "name": "Cooked rice",
+          "prep": "for serving",
+          "type": "",
+          "amount": "2 cups"
+        }
+      ],
+      "instructions": "Season chicken thighs with salt and pepper. Grill or bake chicken until fully cooked. In a bowl, combine diced mango, chopped red onion, cilantro, minced jalapeño, and lime juice. Dice the cooked chicken and mix it with the mango salsa. Serve over cooked rice.",
+      "prep_time": "15",
+      "cook_time": "25",
+      "full_cook_time": "40",
+      "servings": "3",
+      "image": "https://cdn.dummyjson.com/recipe-images/5.webp",
+      "recipe_tags": ["Chicken", "Salsa", "Dinner"]
+    },
+    {
+      "recipe_id": "6",
+      "name": "Quinoa Salad with Avocado",
+      "ingredients": [
+        { "name": "Quinoa", "prep": "cooked", "type": "", "amount": "200 g" },
+        {
+          "name": "Avocado",
+          "prep": "diced",
+          "type": "",
+          "amount": "1 avocado"
+        },
+        {
+          "name": "Cherry tomatoes",
+          "prep": "halved",
+          "type": "",
+          "amount": "200 g"
+        },
+        { "name": "Cucumber", "prep": "diced", "type": "", "amount": "100 g" },
+        {
+          "name": "Red bell pepper",
+          "prep": "diced",
+          "type": "",
+          "amount": "1 red bell pepper"
+        },
+        {
+          "name": "Feta cheese",
+          "prep": "crumbled",
+          "type": "",
+          "amount": "75 g"
+        },
+        {
+          "name": "Lemon vinaigrette dressing",
+          "prep": "",
+          "type": "",
+          "amount": "50 ml"
+        },
+        {
+          "name": "Salt",
+          "prep": "",
+          "type": "seasoning",
+          "amount": "1/2 tsp"
+        },
+        {
+          "name": "Pepper",
+          "prep": "",
+          "type": "seasoning",
+          "amount": "1/4 tsp"
+        }
+      ],
+      "instructions": "In a large bowl, combine cooked quinoa, diced avocado, halved cherry tomatoes, diced cucumber, diced red bell pepper, and crumbled feta cheese. Drizzle with lemon vinaigrette dressing and toss to combine. Season with salt and pepper to taste. Chill in the refrigerator before serving.",
+      "prep_time": "20",
+      "cook_time": "15",
+      "full_cook_time": "35",
+      "servings": "4",
+      "image": "https://cdn.dummyjson.com/recipe-images/6.webp",
+      "recipe_tags": ["Salad", "Quinoa", "Lunch", "Side Dish"]
+    },
+    {
+      "recipe_id": "7",
+      "name": "Tomato Basil Bruschetta",
+      "ingredients": [
+        {
+          "name": "Baguette",
+          "prep": "sliced",
+          "type": "",
+          "amount": "1 baguette"
+        },
+        {
+          "name": "Tomatoes",
+          "prep": "diced",
+          "type": "",
+          "amount": "4 tomatoes"
+        },
+        {
+          "name": "Fresh basil",
+          "prep": "chopped",
+          "type": "",
+          "amount": "1 bunch"
+        },
+        {
+          "name": "Garlic cloves",
+          "prep": "minced",
+          "type": "",
+          "amount": "2 cloves"
+        },
+        { "name": "Balsamic glaze", "prep": "", "type": "", "amount": "50 ml" },
+        { "name": "Olive oil", "prep": "", "type": "", "amount": "15 ml" },
+        {
+          "name": "Salt",
+          "prep": "",
+          "type": "seasoning",
+          "amount": "1/4 tsp"
+        },
+        {
+          "name": "Pepper",
+          "prep": "",
+          "type": "seasoning",
+          "amount": "1/8 tsp"
+        }
+      ],
+      "instructions": "Preheat the oven to 375°F (190°C). Place baguette slices on a baking sheet and toast in the oven until golden brown. In a bowl, combine diced tomatoes, chopped fresh basil, minced garlic, and a drizzle of olive oil. Season with salt and pepper to taste. Top each toasted baguette slice with the tomato-basil mixture. Drizzle with balsamic glaze before serving.",
+      "prep_time": "15",
+      "cook_time": "10",
+      "full_cook_time": "25",
+      "servings": "6",
+      "image": "https://cdn.dummyjson.com/recipe-images/7.webp",
+      "recipe_tags": ["Bruschetta", "Italian", "Appetizer"]
+    },
+    {
+      "recipe_id": "8",
+      "name": "Beef and Broccoli Stir-Fry",
+      "ingredients": [
+        {
+          "name": "Beef sirloin",
+          "prep": "thinly sliced",
+          "type": "",
+          "amount": "300 g"
+        },
+        {
+          "name": "Broccoli florets",
+          "prep": "",
+          "type": "",
+          "amount": "200 g"
+        },
+        { "name": "Soy sauce", "prep": "", "type": "sauce", "amount": "50 ml" },
+        {
+          "name": "Oyster sauce",
+          "prep": "",
+          "type": "sauce",
+          "amount": "30 ml"
+        },
+        { "name": "Sesame oil", "prep": "", "type": "oil", "amount": "15 ml" },
+        {
+          "name": "Garlic",
+          "prep": "minced",
+          "type": "seasoning",
+          "amount": "2 cloves"
+        },
+        {
+          "name": "Ginger",
+          "prep": "minced",
+          "type": "seasoning",
+          "amount": "1 tbsp"
+        },
+        {
+          "name": "Cornstarch",
+          "prep": "",
+          "type": "thickener",
+          "amount": "1 tbsp"
+        },
+        {
+          "name": "Cooked white rice",
+          "prep": "for serving",
+          "type": "",
+          "amount": "2 cups"
+        }
+      ],
+      "instructions": "In a bowl, mix soy sauce, oyster sauce, sesame oil, and cornstarch to create the sauce. In a wok, stir-fry thinly sliced beef until browned. Remove from the wok. Stir-fry broccoli florets, minced garlic, and minced ginger in the same wok. Add the cooked beef back to the wok and pour the sauce over the mixture. Stir until everything is coated and heated through. Serve over cooked white rice.",
+      "prep_time": "20",
+      "cook_time": "15",
+      "full_cook_time": "35",
+      "servings": "4",
+      "image": "https://cdn.dummyjson.com/recipe-images/8.webp",
+      "recipe_tags": ["Beef", "Stir-fry", "Asian", "Dinner"]
+    },
+    {
+      "recipe_id": "9",
+      "name": "Caprese Salad",
+      "ingredients": [
+        {
+          "name": "Tomatoes",
+          "prep": "sliced",
+          "type": "",
+          "amount": "3 tomatoes"
+        },
+        {
+          "name": "Fresh mozzarella cheese",
+          "prep": "sliced",
+          "type": "",
+          "amount": "200 g"
+        },
+        {
+          "name": "Fresh basil leaves",
+          "prep": "",
+          "type": "",
+          "amount": "10 leaves"
+        },
+        { "name": "Balsamic glaze", "prep": "", "type": "", "amount": "50 ml" },
+        {
+          "name": "Extra virgin olive oil",
+          "prep": "",
+          "type": "oil",
+          "amount": "30 ml"
+        },
+        {
+          "name": "Salt",
+          "prep": "",
+          "type": "seasoning",
+          "amount": "1/4 tsp"
+        },
+        {
+          "name": "Pepper",
+          "prep": "",
+          "type": "seasoning",
+          "amount": "1/8 tsp"
+        }
+      ],
+      "instructions": "Arrange alternating slices of tomatoes and fresh mozzarella on a serving platter. Tuck fresh basil leaves between the slices. Drizzle with balsamic glaze and extra virgin olive oil. Season with salt and pepper to taste. Serve immediately as a refreshing salad.",
+      "prep_time": "10",
+      "cook_time": "0",
+      "full_cook_time": "10",
+      "servings": "2",
+      "image": "https://cdn.dummyjson.com/recipe-images/9.webp",
+      "recipe_tags": ["Salad", "Caprese", "Lunch", "Vegetarian", "Easy"]
+    },
+    {
+      "recipe_id": "10",
+      "name": "Shrimp Scampi Pasta",
+      "ingredients": [
+        {
+          "name": "Linguine pasta",
+          "prep": "",
+          "type": "pasta",
+          "amount": "200 g"
+        },
+        {
+          "name": "Shrimp",
+          "prep": "peeled and deveined",
+          "type": "seafood",
+          "amount": "300 g"
+        },
+        {
+          "name": "Garlic",
+          "prep": "minced",
+          "type": "seasoning",
+          "amount": "2 cloves"
+        },
+        { "name": "Olive oil", "prep": "", "type": "oil", "amount": "15 ml" },
+        {
+          "name": "White wine",
+          "prep": "",
+          "type": "liquid",
+          "amount": "50 ml"
+        },
+        {
+          "name": "Lemon juice",
+          "prep": "",
+          "type": "liquid",
+          "amount": "15 ml"
+        },
+        {
+          "name": "Grated parmesan cheese",
+          "prep": "",
+          "type": "cheese",
+          "amount": "30 g"
+        },
+        {
+          "name": "Salt",
+          "prep": "",
+          "type": "seasoning",
+          "amount": "1/4 tsp"
+        },
+        {
+          "name": "Pepper",
+          "prep": "",
+          "type": "seasoning",
+          "amount": "1/8 tsp"
+        }
+      ],
+      "instructions": "Cook linguine pasta according to package instructions. In a skillet, sauté minced garlic in olive oil until fragrant. Add shrimp and cook until pink and opaque. Pour in white wine and lemon juice. Simmer until the sauce slightly thickens and coat the pasta. Serve hot with grated parmesan cheese.",
+      "prep_time": "10",
+      "cook_time": "15",
+      "full_cook_time": "25",
+      "servings": "2",
+      "image": "https://cdn.dummyjson.com/recipe-images/10.webp",
+      "recipe_tags": ["Seafood", "Pasta", "Dinner", "Medium", "Lactose-Free"]
     }
   ]
 }

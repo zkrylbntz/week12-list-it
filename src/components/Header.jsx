@@ -68,7 +68,11 @@ export default function Header() {
             </li>
           </ul>
         </div>
-        <Link id="navButton2" className={RobotoFlex.className} href="/">
+        <Link
+          id="navButton2"
+          className={RobotoFlex.className}
+          href="/recipesPage"
+        >
           Recipes
         </Link>
         <Link

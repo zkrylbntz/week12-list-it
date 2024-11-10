@@ -3,6 +3,15 @@ import "./header.css";
 import { Roboto_Flex } from "next/font/google";
 import { Josefin_Sans } from "next/font/google";
 
+import {
+  UserButton,
+  SignInButton,
+  SignUpButton,
+  SignedIn,
+  SignedOut,
+} from "@clerk/nextjs";
+import { auth } from "@clerk/nextjs/server";
+
 const RobotoFlex = Roboto_Flex({
   weight: "400",
   style: "normal",
@@ -16,8 +25,19 @@ const JosefinSans = Josefin_Sans({
 });
 
 export default function Header() {
+  const { userId } = auth();
+
   return (
     <div className="headerContainer">
+      <SignedIn>
+        <UserButton />
+      </SignedIn>
+
+      <SignedOut>
+        <SignInButton mode="modal">Sign In</SignInButton>
+        <SignUpButton>Sign Up</SignUpButton>
+      </SignedOut>
+
       <nav className="navBar">
         <div className="dropdown" id="navButton">
           <div tabIndex={0} role="button">

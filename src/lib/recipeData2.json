@@ -497,6 +497,383 @@
       "servings": "2",
       "image": "https://cdn.dummyjson.com/recipe-images/10.webp",
       "recipe_tags": ["Seafood", "Pasta", "Dinner", "Medium", "Lactose-Free"]
+    },
+    {
+      "recipe_id": "11",
+      "name": "Chicken Biryani",
+      "ingredients": [
+        { "name": "Basmati rice", "prep": "", "type": "grain", "amount": "" },
+        {
+          "name": "Chicken",
+          "prep": "cut into pieces",
+          "type": "meat",
+          "amount": ""
+        },
+        {
+          "name": "Onions",
+          "prep": "thinly sliced",
+          "type": "vegetable",
+          "amount": ""
+        },
+        {
+          "name": "Tomatoes",
+          "prep": "chopped",
+          "type": "vegetable",
+          "amount": ""
+        },
+        { "name": "Yogurt", "prep": "", "type": "dairy", "amount": "" },
+        {
+          "name": "Ginger-garlic paste",
+          "prep": "",
+          "type": "seasoning",
+          "amount": ""
+        },
+        {
+          "name": "Biryani masala",
+          "prep": "",
+          "type": "spice blend",
+          "amount": ""
+        },
+        {
+          "name": "Green chilies",
+          "prep": "sliced",
+          "type": "vegetable",
+          "amount": ""
+        },
+        {
+          "name": "Fresh coriander leaves",
+          "prep": "",
+          "type": "herb",
+          "amount": ""
+        },
+        { "name": "Mint leaves", "prep": "", "type": "herb", "amount": "" },
+        { "name": "Ghee", "prep": "", "type": "fat", "amount": "" },
+        {
+          "name": "Salt",
+          "prep": "to taste",
+          "type": "seasoning",
+          "amount": ""
+        }
+      ],
+      "instructions": "Marinate chicken with yogurt, ginger-garlic paste, biryani masala, and salt. In a pot, sauté sliced onions until golden brown. Remove half for later use. Layer marinated chicken, chopped tomatoes, half of the fried onions, and rice in the pot. Top with ghee, green chilies, fresh coriander leaves, mint leaves, and the remaining fried onions. Cover and cook on low heat until the rice is fully cooked and aromatic. Serve hot, garnished with additional coriander and mint leaves.",
+      "prep_time": "30",
+      "cook_time": "45",
+      "full_cook_time": "75",
+      "servings": "6",
+      "image": "https://cdn.dummyjson.com/recipe-images/11.webp",
+      "recipe_tags": [
+        "Biryani",
+        "Chicken",
+        "Main course",
+        "Indian",
+        "Pakistani",
+        "Asian",
+        "Lunch",
+        "Dinner"
+      ]
+    },
+    {
+      "recipe_id": "12",
+      "name": "Chicken Karahi",
+      "ingredients": [
+        {
+          "name": "Chicken",
+          "prep": "cut into pieces",
+          "type": "meat",
+          "amount": ""
+        },
+        {
+          "name": "Tomatoes",
+          "prep": "chopped",
+          "type": "vegetable",
+          "amount": ""
+        },
+        {
+          "name": "Green chilies",
+          "prep": "sliced",
+          "type": "vegetable",
+          "amount": ""
+        },
+        {
+          "name": "Ginger",
+          "prep": "julienned",
+          "type": "seasoning",
+          "amount": ""
+        },
+        {
+          "name": "Garlic",
+          "prep": "minced",
+          "type": "seasoning",
+          "amount": ""
+        },
+        {
+          "name": "Coriander powder",
+          "prep": "",
+          "type": "spice",
+          "amount": ""
+        },
+        { "name": "Cumin powder", "prep": "", "type": "spice", "amount": "" },
+        {
+          "name": "Red chili powder",
+          "prep": "",
+          "type": "spice",
+          "amount": ""
+        },
+        {
+          "name": "Garam masala",
+          "prep": "",
+          "type": "spice blend",
+          "amount": ""
+        },
+        { "name": "Cooking oil", "prep": "", "type": "fat", "amount": "" },
+        {
+          "name": "Fresh coriander leaves",
+          "prep": "",
+          "type": "herb",
+          "amount": ""
+        },
+        {
+          "name": "Salt",
+          "prep": "to taste",
+          "type": "seasoning",
+          "amount": ""
+        }
+      ],
+      "instructions": "In a wok (karahi), heat cooking oil and sauté minced garlic until golden brown. Add chicken pieces and cook until browned on all sides. Add chopped tomatoes, green chilies, ginger, and spices. Cook until tomatoes are soft. Cover and simmer until the chicken is tender and the oil separates from the masala. Garnish with fresh coriander leaves and serve hot with naan or rice.",
+      "prep_time": "20",
+      "cook_time": "30",
+      "full_cook_time": "50",
+      "servings": "4",
+      "image": "https://cdn.dummyjson.com/recipe-images/12.webp",
+      "recipe_tags": [
+        "Chicken",
+        "Karahi",
+        "Main course",
+        "Indian",
+        "Pakistani",
+        "Asian",
+        "Lunch",
+        "Dinner"
+      ]
+    },
+    {
+      "recipe_id": "13",
+      "name": "Aloo Keema",
+      "ingredients": [
+        { "name": "Ground beef", "prep": "", "type": "meat", "amount": "" },
+        {
+          "name": "Potatoes",
+          "prep": "peeled and diced",
+          "type": "vegetable",
+          "amount": ""
+        },
+        {
+          "name": "Onions",
+          "prep": "finely chopped",
+          "type": "vegetable",
+          "amount": ""
+        },
+        {
+          "name": "Tomatoes",
+          "prep": "chopped",
+          "type": "vegetable",
+          "amount": ""
+        },
+        {
+          "name": "Ginger-garlic paste",
+          "prep": "",
+          "type": "seasoning",
+          "amount": ""
+        },
+        { "name": "Cumin powder", "prep": "", "type": "spice", "amount": "" },
+        {
+          "name": "Coriander powder",
+          "prep": "",
+          "type": "spice",
+          "amount": ""
+        },
+        {
+          "name": "Turmeric powder",
+          "prep": "",
+          "type": "spice",
+          "amount": ""
+        },
+        {
+          "name": "Red chili powder",
+          "prep": "",
+          "type": "spice",
+          "amount": ""
+        },
+        { "name": "Cooking oil", "prep": "", "type": "fat", "amount": "" },
+        {
+          "name": "Fresh coriander leaves",
+          "prep": "",
+          "type": "herb",
+          "amount": ""
+        },
+        {
+          "name": "Salt",
+          "prep": "to taste",
+          "type": "seasoning",
+          "amount": ""
+        }
+      ],
+      "instructions": "In a pan, heat cooking oil and sauté chopped onions until golden brown. Add ginger-garlic paste and sauté until fragrant. Add ground beef and cook until browned. Drain excess oil if needed. Add diced potatoes, chopped tomatoes, and spices. Mix well. Cover and simmer until the potatoes are tender and the masala is well-cooked. Garnish with fresh coriander leaves and serve hot with naan or rice.",
+      "prep_time": "25",
+      "cook_time": "35",
+      "full_cook_time": "60",
+      "servings": "5",
+      "image": "https://cdn.dummyjson.com/recipe-images/13.webp",
+      "recipe_tags": [
+        "Keema",
+        "Potatoes",
+        "Main course",
+        "Pakistani",
+        "Asian",
+        "Lunch",
+        "Dinner"
+      ]
+    },
+    {
+      "recipe_id": "14",
+      "name": "Chapli Kebabs",
+      "ingredients": [
+        { "name": "Ground beef", "prep": "", "type": "meat", "amount": "" },
+        {
+          "name": "Onions",
+          "prep": "finely chopped",
+          "type": "vegetable",
+          "amount": ""
+        },
+        {
+          "name": "Tomatoes",
+          "prep": "finely chopped",
+          "type": "vegetable",
+          "amount": ""
+        },
+        {
+          "name": "Green chilies",
+          "prep": "chopped",
+          "type": "vegetable",
+          "amount": ""
+        },
+        {
+          "name": "Coriander leaves",
+          "prep": "chopped",
+          "type": "herb",
+          "amount": ""
+        },
+        {
+          "name": "Pomegranate seeds",
+          "prep": "",
+          "type": "fruit",
+          "amount": ""
+        },
+        {
+          "name": "Ginger-garlic paste",
+          "prep": "",
+          "type": "seasoning",
+          "amount": ""
+        },
+        { "name": "Cumin powder", "prep": "", "type": "spice", "amount": "" },
+        {
+          "name": "Coriander powder",
+          "prep": "",
+          "type": "spice",
+          "amount": ""
+        },
+        {
+          "name": "Red chili powder",
+          "prep": "",
+          "type": "spice",
+          "amount": ""
+        },
+        { "name": "Egg", "prep": "", "type": "protein", "amount": "" },
+        { "name": "Cooking oil", "prep": "", "type": "fat", "amount": "" },
+        {
+          "name": "Salt",
+          "prep": "to taste",
+          "type": "seasoning",
+          "amount": ""
+        }
+      ],
+      "instructions": "In a large bowl, mix ground beef, chopped onions, tomatoes, green chilies, coriander leaves, and pomegranate seeds. Add ginger-garlic paste, cumin powder, coriander powder, red chili powder, and salt. Mix well. Add an egg to bind the mixture and form into round flat kebabs. Heat cooking oil in a pan and shallow fry the kebabs until browned on both sides. Serve hot with naan or mint chutney.",
+      "prep_time": "30",
+      "cook_time": "20",
+      "full_cook_time": "50",
+      "servings": "4",
+      "image": "https://cdn.dummyjson.com/recipe-images/14.webp",
+      "recipe_tags": [
+        "Kebabs",
+        "Beef",
+        "Indian",
+        "Pakistani",
+        "Asian",
+        "Lunch",
+        "Dinner",
+        "Snacks"
+      ]
+    },
+    {
+      "recipe_id": "15",
+      "name": "Saag (Spinach) with Makki di Roti",
+      "ingredients": [
+        {
+          "name": "Mustard greens",
+          "prep": "washed and chopped",
+          "type": "vegetable",
+          "amount": ""
+        },
+        {
+          "name": "Spinach",
+          "prep": "washed and chopped",
+          "type": "vegetable",
+          "amount": ""
+        },
+        {
+          "name": "Cornmeal (makki ka atta)",
+          "prep": "",
+          "type": "grain",
+          "amount": ""
+        },
+        {
+          "name": "Onions",
+          "prep": "finely chopped",
+          "type": "vegetable",
+          "amount": ""
+        },
+        {
+          "name": "Green chilies",
+          "prep": "chopped",
+          "type": "vegetable",
+          "amount": ""
+        },
+        { "name": "Ginger", "prep": "grated", "type": "spice", "amount": "" },
+        { "name": "Ghee", "prep": "", "type": "fat", "amount": "" },
+        {
+          "name": "Salt",
+          "prep": "to taste",
+          "type": "seasoning",
+          "amount": ""
+        }
+      ],
+      "instructions": "Boil mustard greens and spinach until tender. Drain and blend into a coarse paste. In a pan, sauté chopped onions, green chilies, and grated ginger in ghee until golden brown. Add the greens paste and cook until it thickens. Meanwhile, knead cornmeal with water to make a dough. Roll into rotis (flatbreads). Cook the rotis on a griddle until golden brown. Serve hot saag with makki di roti and a dollop of ghee.",
+      "prep_time": "40",
+      "cook_time": "30",
+      "full_cook_time": "70",
+      "servings": "3",
+      "image": "https://cdn.dummyjson.com/recipe-images/15.webp",
+      "recipe_tags": [
+        "Saag",
+        "Roti",
+        "Main course",
+        "Indian",
+        "Pakistani",
+        "Asian",
+        "Breakfast",
+        "Lunch",
+        "Dinner"
+      ]
     }
   ]
 }

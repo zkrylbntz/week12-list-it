@@ -39,7 +39,8 @@
         "Easy",
         "Dinner",
         "Vegetarian",
-        "Gluten"
+        "Gluten",
+        "None"
       ]
     },
     {
@@ -84,7 +85,8 @@
         "Asian",
         "Lunch",
         "Medium",
-        "Gluten"
+        "Gluten",
+        "None"
       ]
     },
     {
@@ -117,7 +119,15 @@
       "full_cook_time": "25",
       "servings": "24",
       "image": "https://cdn.dummyjson.com/recipe-images/3.webp",
-      "recipe_tags": ["Cookies", "Dessert", "Baking", "Snack"]
+      "recipe_tags": [
+        "Cookies",
+        "Dessert",
+        "Baking",
+        "Snack",
+        "Vegetarian",
+        "Easy",
+        "None"
+      ]
     },
     {
       "recipe_id": "4",
@@ -168,7 +178,7 @@
       "full_cook_time": "35",
       "servings": "4",
       "image": "https://cdn.dummyjson.com/recipe-images/4.webp",
-      "recipe_tags": ["Pasta", "Chicken", "Lunch", "Dinner"]
+      "recipe_tags": ["Pasta", "Chicken", "Lunch", "Dinner", "None", "Lactose"]
     },
     {
       "recipe_id": "5",
@@ -219,7 +229,7 @@
       "full_cook_time": "40",
       "servings": "3",
       "image": "https://cdn.dummyjson.com/recipe-images/5.webp",
-      "recipe_tags": ["Chicken", "Salsa", "Dinner"]
+      "recipe_tags": ["Chicken", "Salsa", "Dinner", "None"]
     },
     {
       "recipe_id": "6",
@@ -276,7 +286,14 @@
       "full_cook_time": "35",
       "servings": "4",
       "image": "https://cdn.dummyjson.com/recipe-images/6.webp",
-      "recipe_tags": ["Salad", "Quinoa", "Lunch", "Side Dish"]
+      "recipe_tags": [
+        "Salad",
+        "Quinoa",
+        "Lunch",
+        "Side Dish",
+        "Vegetarian",
+        "None"
+      ]
     },
     {
       "recipe_id": "7",
@@ -327,7 +344,14 @@
       "full_cook_time": "25",
       "servings": "6",
       "image": "https://cdn.dummyjson.com/recipe-images/7.webp",
-      "recipe_tags": ["Bruschetta", "Italian", "Appetizer"]
+      "recipe_tags": [
+        "Bruschetta",
+        "Italian",
+        "Appetizer",
+        "None",
+        "Gluten",
+        "Vegan"
+      ]
     },
     {
       "recipe_id": "8",
@@ -340,8 +364,8 @@
           "amount": "300 g"
         },
         {
-          "name": "Broccoli florets",
-          "prep": "",
+          "name": "Broccoli",
+          "prep": "florets",
           "type": "",
           "amount": "200 g"
         },
@@ -372,8 +396,8 @@
           "amount": "1 tbsp"
         },
         {
-          "name": "Cooked white rice",
-          "prep": "for serving",
+          "name": "White rice",
+          "prep": "cooked",
           "type": "",
           "amount": "2 cups"
         }
@@ -384,7 +408,7 @@
       "full_cook_time": "35",
       "servings": "4",
       "image": "https://cdn.dummyjson.com/recipe-images/8.webp",
-      "recipe_tags": ["Beef", "Stir-fry", "Asian", "Dinner"]
+      "recipe_tags": ["Beef", "Stir-fry", "Asian", "Dinner", "None"]
     },
     {
       "recipe_id": "9",
@@ -397,14 +421,14 @@
           "amount": "3 tomatoes"
         },
         {
-          "name": "Fresh mozzarella cheese",
-          "prep": "sliced",
+          "name": "Mozzarella cheese",
+          "prep": "fresh, sliced",
           "type": "",
           "amount": "200 g"
         },
         {
-          "name": "Fresh basil leaves",
-          "prep": "",
+          "name": "Basil leaves",
+          "prep": "fresh",
           "type": "",
           "amount": "10 leaves"
         },
@@ -434,7 +458,15 @@
       "full_cook_time": "10",
       "servings": "2",
       "image": "https://cdn.dummyjson.com/recipe-images/9.webp",
-      "recipe_tags": ["Salad", "Caprese", "Lunch", "Vegetarian", "Easy"]
+      "recipe_tags": [
+        "Salad",
+        "Caprese",
+        "Lunch",
+        "Vegetarian",
+        "Easy",
+        "None",
+        "Lactose"
+      ]
     },
     {
       "recipe_id": "10",
@@ -472,8 +504,8 @@
           "amount": "15 ml"
         },
         {
-          "name": "Grated parmesan cheese",
-          "prep": "",
+          "name": "Parmesan cheese",
+          "prep": "grated",
           "type": "cheese",
           "amount": "30 g"
         },
@@ -496,7 +528,15 @@
       "full_cook_time": "25",
       "servings": "2",
       "image": "https://cdn.dummyjson.com/recipe-images/10.webp",
-      "recipe_tags": ["Seafood", "Pasta", "Dinner", "Medium", "Lactose-Free"]
+      "recipe_tags": [
+        "Seafood",
+        "Pasta",
+        "Dinner",
+        "Medium",
+        "None",
+        "Pescatarian",
+        "Gluten"
+      ]
     },
     {
       "recipe_id": "11",
@@ -541,8 +581,8 @@
           "amount": ""
         },
         {
-          "name": "Fresh coriander leaves",
-          "prep": "",
+          "name": "Coriander leaves",
+          "prep": "fresh",
           "type": "herb",
           "amount": ""
         },
@@ -569,7 +609,9 @@
         "Pakistani",
         "Asian",
         "Lunch",
-        "Dinner"
+        "Dinner",
+        "None",
+        "Lactose"
       ]
     },
     {
@@ -627,8 +669,8 @@
         },
         { "name": "Cooking oil", "prep": "", "type": "fat", "amount": "" },
         {
-          "name": "Fresh coriander leaves",
-          "prep": "",
+          "name": "Coriander leaves",
+          "prep": "fresh",
           "type": "herb",
           "amount": ""
         },
@@ -653,7 +695,8 @@
         "Pakistani",
         "Asian",
         "Lunch",
-        "Dinner"
+        "Dinner",
+        "None"
       ]
     },
     {
@@ -731,7 +774,8 @@
         "Pakistani",
         "Asian",
         "Lunch",
-        "Dinner"
+        "Dinner",
+        "None"
       ]
     },
     {
@@ -811,7 +855,9 @@
         "Asian",
         "Lunch",
         "Dinner",
-        "Snacks"
+        "Snacks",
+        "Vegetarian",
+        "None"
       ]
     },
     {
@@ -872,7 +918,9 @@
         "Asian",
         "Breakfast",
         "Lunch",
-        "Dinner"
+        "Dinner",
+        "Vegan",
+        "None"
       ]
     }
   ]

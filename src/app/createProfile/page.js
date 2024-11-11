@@ -27,8 +27,8 @@ export default async function CreateProfilePage({ params }) {
       [userId, username, JSON.stringify(tags)]
     );
 
-    revalidatePath(`/createProfile`);
-    redirect(`/user/${userId}`);
+    revalidatePath(`/recipesPage`);
+    redirect(`/recipesPage`);
   }
   return (
     <>

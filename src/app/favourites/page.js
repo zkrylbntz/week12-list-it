@@ -1,3 +1,4 @@
+import BasketButton from "@/components/BasketButton";
 import FavouriteButton from "@/components/FavouriteButton";
 
 export default function Favourites() {
@@ -9,6 +10,7 @@ export default function Favourites() {
 
       <h1>These are your favourites</h1>
       <FavouriteButton />
+      <BasketButton />
     </>
   );
 }

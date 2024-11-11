@@ -1,0 +1,15 @@
+@import url("https://cdn.jsdelivr.net/gh/jgthms/minireset.css@master/minireset.min.css");
+
+.btnClass {
+  background-color: white;
+}
+
+.btnClass.clicked {
+  background-color: red;
+}
+
+.favourite-button {
+  border-radius: 100%;
+  width: 24px;
+  height: 24px;
+}

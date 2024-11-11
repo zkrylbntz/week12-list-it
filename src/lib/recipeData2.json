@@ -874,6 +874,301 @@
         "Lunch",
         "Dinner"
       ]
+    },
+    {
+      "recipe_id": "16",
+      "name": "Japanese Ramen Soup",
+      "ingredients": [
+        { "name": "Ramen noodles", "prep": "", "type": "grain", "amount": "" },
+        { "name": "Chicken broth", "prep": "", "type": "broth", "amount": "" },
+        { "name": "Soy sauce", "prep": "", "type": "sauce", "amount": "" },
+        { "name": "Mirin", "prep": "", "type": "seasoning", "amount": "" },
+        { "name": "Sesame oil", "prep": "", "type": "fat", "amount": "" },
+        {
+          "name": "Shiitake mushrooms",
+          "prep": "sliced",
+          "type": "vegetable",
+          "amount": ""
+        },
+        {
+          "name": "Bok choy",
+          "prep": "chopped",
+          "type": "vegetable",
+          "amount": ""
+        },
+        {
+          "name": "Green onions",
+          "prep": "sliced",
+          "type": "vegetable",
+          "amount": ""
+        },
+        {
+          "name": "Soft-boiled eggs",
+          "prep": "",
+          "type": "protein",
+          "amount": ""
+        },
+        {
+          "name": "Grilled chicken slices",
+          "prep": "",
+          "type": "meat",
+          "amount": ""
+        },
+        {
+          "name": "Norwegian seaweed (nori)",
+          "prep": "",
+          "type": "seafood",
+          "amount": ""
+        }
+      ],
+      "instructions": "Cook ramen noodles according to package instructions and set aside. In a pot, combine chicken broth, soy sauce, mirin, and sesame oil. Bring to a simmer. Add sliced shiitake mushrooms and chopped bok choy. Cook until vegetables are tender. Divide the cooked noodles into serving bowls and ladle the hot broth over them. Top with green onions, soft-boiled eggs, grilled chicken slices, and nori. Serve hot and enjoy the authentic Japanese ramen!",
+      "prep_time": "20",
+      "cook_time": "25",
+      "full_cook_time": "45",
+      "servings": "2",
+      "image": "https://cdn.dummyjson.com/recipe-images/16.webp",
+      "recipe_tags": ["Ramen", "Japanese", "Soup", "Asian", "Dinner"]
+    },
+    {
+      "recipe_id": "17",
+      "name": "Moroccan Chickpea Tagine",
+      "ingredients": [
+        {
+          "name": "Chickpeas",
+          "prep": "cooked",
+          "type": "legume",
+          "amount": ""
+        },
+        {
+          "name": "Tomatoes",
+          "prep": "chopped",
+          "type": "vegetable",
+          "amount": ""
+        },
+        {
+          "name": "Carrots",
+          "prep": "diced",
+          "type": "vegetable",
+          "amount": ""
+        },
+        {
+          "name": "Onions",
+          "prep": "finely chopped",
+          "type": "vegetable",
+          "amount": ""
+        },
+        {
+          "name": "Garlic",
+          "prep": "minced",
+          "type": "seasoning",
+          "amount": ""
+        },
+        { "name": "Cumin", "prep": "", "type": "spice", "amount": "" },
+        { "name": "Coriander", "prep": "", "type": "spice", "amount": "" },
+        { "name": "Cinnamon", "prep": "", "type": "spice", "amount": "" },
+        { "name": "Paprika", "prep": "", "type": "spice", "amount": "" },
+        {
+          "name": "Vegetable broth",
+          "prep": "",
+          "type": "broth",
+          "amount": ""
+        },
+        { "name": "Olives", "prep": "", "type": "fruit", "amount": "" },
+        {
+          "name": "Fresh cilantro",
+          "prep": "chopped",
+          "type": "herb",
+          "amount": ""
+        }
+      ],
+      "instructions": "In a tagine or large pot, sauté chopped onions and minced garlic until softened. Add diced carrots, chopped tomatoes, and cooked chickpeas. Season with cumin, coriander, cinnamon, and paprika. Stir to coat. Pour in vegetable broth and bring to a simmer. Cook until carrots are tender. Stir in olives and garnish with fresh cilantro before serving. Serve this flavorful Moroccan dish with couscous or crusty bread.",
+      "prep_time": "15",
+      "cook_time": "30",
+      "full_cook_time": "45",
+      "servings": "4",
+      "image": "https://cdn.dummyjson.com/recipe-images/17.webp",
+      "recipe_tags": ["Tagine", "Chickpea", "Moroccan", "Dinner"]
+    },
+    {
+      "recipe_id": "18",
+      "name": "Korean Bibimbap",
+      "ingredients": [
+        {
+          "name": "Cooked white rice",
+          "prep": "",
+          "type": "grain",
+          "amount": ""
+        },
+        {
+          "name": "Beef bulgogi",
+          "prep": "marinated and grilled",
+          "type": "meat",
+          "amount": ""
+        },
+        {
+          "name": "Carrots",
+          "prep": "julienned and sautéed",
+          "type": "vegetable",
+          "amount": ""
+        },
+        {
+          "name": "Spinach",
+          "prep": "blanched and seasoned",
+          "type": "vegetable",
+          "amount": ""
+        },
+        {
+          "name": "Zucchini",
+          "prep": "sliced and grilled",
+          "type": "vegetable",
+          "amount": ""
+        },
+        {
+          "name": "Bean sprouts",
+          "prep": "blanched",
+          "type": "vegetable",
+          "amount": ""
+        },
+        { "name": "Fried egg", "prep": "", "type": "protein", "amount": "" },
+        { "name": "Gochujang", "prep": "", "type": "condiment", "amount": "" },
+        { "name": "Sesame oil", "prep": "", "type": "fat", "amount": "" },
+        {
+          "name": "Toasted sesame seeds",
+          "prep": "",
+          "type": "seed",
+          "amount": ""
+        }
+      ],
+      "instructions": "Arrange cooked white rice in a bowl. Top with beef bulgogi, sautéed carrots, seasoned spinach, grilled zucchini, and blanched bean sprouts. Place a fried egg on top and drizzle with gochujang and sesame oil. Sprinkle with toasted sesame seeds before serving. Mix everything together before enjoying this delicious Korean bibimbap! Feel free to customize with additional vegetables or protein.",
+      "prep_time": "30",
+      "cook_time": "20",
+      "full_cook_time": "50",
+      "servings": "2",
+      "image": "https://cdn.dummyjson.com/recipe-images/18.webp",
+      "recipe_tags": ["Bibimbap", "Korean", "Rice", "Dinner"]
+    },
+    {
+      "recipe_id": "19",
+      "name": "Greek Moussaka",
+      "ingredients": [
+        {
+          "name": "Eggplants",
+          "prep": "sliced",
+          "type": "vegetable",
+          "amount": ""
+        },
+        {
+          "name": "Ground lamb or beef",
+          "prep": "",
+          "type": "meat",
+          "amount": ""
+        },
+        {
+          "name": "Onions",
+          "prep": "finely chopped",
+          "type": "vegetable",
+          "amount": ""
+        },
+        {
+          "name": "Garlic",
+          "prep": "minced",
+          "type": "seasoning",
+          "amount": ""
+        },
+        {
+          "name": "Tomatoes",
+          "prep": "crushed",
+          "type": "vegetable",
+          "amount": ""
+        },
+        { "name": "Red wine", "prep": "", "type": "liquid", "amount": "" },
+        { "name": "Cinnamon", "prep": "", "type": "spice", "amount": "" },
+        { "name": "Allspice", "prep": "", "type": "spice", "amount": "" },
+        { "name": "Nutmeg", "prep": "", "type": "spice", "amount": "" },
+        { "name": "Olive oil", "prep": "", "type": "fat", "amount": "" },
+        { "name": "Milk", "prep": "", "type": "dairy", "amount": "" },
+        { "name": "Flour", "prep": "", "type": "grain", "amount": "" },
+        {
+          "name": "Parmesan cheese",
+          "prep": "",
+          "type": "dairy",
+          "amount": ""
+        },
+        { "name": "Egg yolks", "prep": "", "type": "protein", "amount": "" }
+      ],
+      "instructions": "Preheat oven to 375°F (190°C). Sauté sliced eggplants in olive oil until browned. Set aside. In the same pan, cook chopped onions and minced garlic until softened. Add ground lamb or beef and brown. Stir in crushed tomatoes, red wine, and spices. In a separate saucepan, make béchamel sauce: melt butter, whisk in flour, add milk, and cook until thickened. Remove from heat and stir in Parmesan cheese and egg yolks. In a baking dish, layer eggplants and meat mixture. Top with béchamel sauce. Bake for 40-45 minutes until golden brown. Let it cool before slicing. Serve slices of moussaka warm and enjoy this Greek classic!",
+      "prep_time": "45",
+      "cook_time": "45",
+      "full_cook_time": "90",
+      "servings": "6",
+      "image": "https://cdn.dummyjson.com/recipe-images/19.webp",
+      "recipe_tags": ["Moussaka", "Greek", "Dinner"]
+    },
+    {
+      "recipe_id": "20",
+      "name": "Butter Chicken (Murgh Makhani)",
+      "ingredients": [
+        {
+          "name": "Chicken thighs",
+          "prep": "boneless and skinless",
+          "type": "meat",
+          "amount": ""
+        },
+        { "name": "Yogurt", "prep": "", "type": "dairy", "amount": "" },
+        {
+          "name": "Ginger-garlic paste",
+          "prep": "",
+          "type": "seasoning",
+          "amount": ""
+        },
+        {
+          "name": "Garam masala",
+          "prep": "",
+          "type": "spice blend",
+          "amount": ""
+        },
+        {
+          "name": "Kashmiri red chili powder",
+          "prep": "",
+          "type": "spice",
+          "amount": ""
+        },
+        {
+          "name": "Tomato puree",
+          "prep": "",
+          "type": "vegetable",
+          "amount": ""
+        },
+        { "name": "Butter", "prep": "", "type": "fat", "amount": "" },
+        { "name": "Heavy cream", "prep": "", "type": "dairy", "amount": "" },
+        {
+          "name": "Kasuri methi",
+          "prep": "(dried fenugreek leaves)",
+          "type": "herb",
+          "amount": ""
+        },
+        { "name": "Sugar", "prep": "", "type": "seasoning", "amount": "" },
+        {
+          "name": "Salt",
+          "prep": "to taste",
+          "type": "seasoning",
+          "amount": ""
+        }
+      ],
+      "instructions": "Marinate chicken thighs in a mixture of yogurt, ginger-garlic paste, garam masala, and Kashmiri red chili powder. In a pan, melt butter and sauté the marinated chicken until browned. Add tomato puree and cook until the oil separates. Stir in heavy cream. Sprinkle kasuri methi, sugar, and salt. Simmer until the chicken is fully cooked. Serve this creamy butter chicken over rice or with naan for an authentic Pakistani/Indian experience.",
+      "prep_time": "30",
+      "cook_time": "25",
+      "full_cook_time": "55",
+      "servings": "4",
+      "image": "https://cdn.dummyjson.com/recipe-images/20.webp",
+      "recipe_tags": [
+        "Butter chicken",
+        "Curry",
+        "Indian",
+        "Pakistani",
+        "Asian",
+        "Dinner"
+      ]
     }
   ]
 }

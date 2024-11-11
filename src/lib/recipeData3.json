@@ -1,0 +1,53 @@
+[
+  {
+    "recipes": [
+      {
+        "recipe_id": "1",
+        "name": "Classic Margherita Pizza",
+        "ingredients": [
+          { "name": "Pizza dough", "prep": "", "type": "", "amount": "" },
+          { "name": "Tomato sauce", "prep": "", "type": "", "amount": "" },
+          {
+            "name": "Mozzarella cheese",
+            "prep": "fresh",
+            "type": "",
+            "amount": ""
+          },
+          { "name": "Basil", "prep": "fresh", "type": "", "amount": "" },
+          {
+            "name": "Olive oil",
+            "prep": "",
+            "type": "condiment",
+            "amount": ""
+          },
+          {
+            "name": "Salt",
+            "prep": "to taste",
+            "type": "condiment",
+            "amount": ""
+          },
+          {
+            "name": "Pepper",
+            "prep": "to taste",
+            "type": "condiment",
+            "amount": ""
+          }
+        ],
+        "instructions": "Preheat the oven to 475°F (245°C). Roll out the pizza dough and spread tomato sauce evenly. Top with slices of fresh mozzarella and fresh basil leaves. Drizzle with olive oil and season with salt and pepper. Bake in the preheated oven for 12-15 minutes or until the crust is golden brown. Slice and serve hot.",
+        "prep_time": "20",
+        "cook_time": "15",
+        "full_cook_time": "35",
+        "servings": "4",
+        "image": "https://cdn.dummyjson.com/recipe-images/1.webp",
+        "recipe_tags": [
+          "Pizza",
+          "Italian",
+          "Easy",
+          "Dinner",
+          "Vegetarian",
+          "Gluten"
+        ]
+      }
+    ]
+  }
+]

@@ -64,7 +64,7 @@ export default function Header() {
                 </Link>
               </li>
               <li>
-                <Link className={RobotoFlex.className} href="/FavMeals">
+                <Link className={RobotoFlex.className} href="/favourites">
                   Favourite Meals
                 </Link>
               </li>

@@ -2,11 +2,13 @@
   "name": "week-12-list-it",
   "version": "0.1.0",
   "private": true,
+  "type": "module",
   "scripts": {
     "dev": "next dev --turbopack",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "seed": "node src/utils/seed.js"
   },
   "dependencies": {
     "@clerk/nextjs": "^6.3.0",

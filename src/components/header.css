@@ -23,6 +23,18 @@
   cursor: pointer;
 }
 
+.signInOut {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 18px;
+  color: white;
+  height: 4rem;
+  width: 80%;
+  justify-content: space-evenly;
+  text-align: center;
+}
+
 #navButton {
   display: flex;
   justify-content: center;

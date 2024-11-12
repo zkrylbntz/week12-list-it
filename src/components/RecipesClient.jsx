@@ -6,55 +6,67 @@ import RecipeFilter from "./RecipeFilter";
 
 export default function RecipesClient({ recipes, availableTags }) {
   const [filteredRecipes, setFilteredRecipes] = useState(recipes);
+  const [searchTerm, setSearchTerm] = useState("");
+  const [selectedTags, setSelectedTags] = useState([]); // Add selectedTags state
 
-  const handleFilterChange = (selectedTags) => {
-    if (selectedTags.length === 0) {
-      // If no tags are selected, show all recipes
-      setFilteredRecipes(recipes);
-    } else {
-      // Convert selectedTags to lowercase for case-insensitive comparison
-      const lowerCaseSelectedTags = selectedTags.map((tag) =>
-        tag.toLowerCase()
-      );
+  const handleFilterChange = (tags) => {
+    setSelectedTags(tags); // Update selected tags state
 
-      // Filter recipes based on matching tags
-      const filtered = recipes.filter((recipe) => {
-        // Ensure recipe.recipe_tags is an array and compare with selectedTags
-        const recipeTags =
-          typeof recipe.recipe_tags === "string"
-            ? JSON.parse(recipe.recipe_tags)
-            : recipe.recipe_tags;
+    const lowerCaseSearchTerm = searchTerm.toLowerCase();
 
-        // Convert each recipe tag to lowercase
-        const lowerCaseRecipeTags = recipeTags.map((tag) => tag.toLowerCase());
-
-        // Check if any of the recipe tags match any of the selected tags
-        const allSelectedTagsMatch = lowerCaseSelectedTags.every((tag) =>
-          lowerCaseRecipeTags.includes(tag)
+    const filtered = recipes.filter((recipe) => {
+      // Check if recipe matches selected tags
+      const matchesTags =
+        tags.length === 0 ||
+        tags.every((tag) =>
+          recipe.recipe_tags.some((recipeTag) =>
+            recipeTag.toLowerCase().includes(tag.toLowerCase())
+          )
         );
 
-        return allSelectedTagsMatch;
-      });
+      // Check if recipe name includes the search term
+      const matchesSearchTerm = recipe.name
+        .toLowerCase()
+        .includes(lowerCaseSearchTerm);
 
-      setFilteredRecipes(filtered);
-    }
+      return matchesTags && matchesSearchTerm;
+    });
+
+    setFilteredRecipes(filtered);
+  };
+
+  const handleSearchChange = (e) => {
+    const term = e.target.value;
+    setSearchTerm(term);
+
+    // Trigger filtering with the updated search term and current tags
+    handleFilterChange(selectedTags);
   };
 
   return (
     <div>
+      {/* Search bar for recipe names */}
+      <input
+        type="text"
+        size={100}
+        placeholder="Search by recipe name..."
+        value={searchTerm}
+        onChange={handleSearchChange}
+        className="w-full"
+      />
+
+      {/* Tag-based filters */}
       <RecipeFilter tags={availableTags} onFilterChange={handleFilterChange} />
+
       <div>
         {filteredRecipes.length > 0 ? (
           filteredRecipes.map((recipe) => {
-            // Ensure ingredients and recipe_tags are arrays (parse if necessary)
-            const ingredients =
-              typeof recipe.ingredients === "string"
-                ? JSON.parse(recipe.ingredients)
-                : recipe.ingredients;
-            const recipeTags =
-              typeof recipe.recipe_tags === "string"
-                ? JSON.parse(recipe.recipe_tags)
-                : recipe.recipe_tags;
+            const ingredients = Array.isArray(recipe.ingredients)
+              ? recipe.ingredients
+              : JSON.parse(recipe.ingredients);
+            const recipeTags = Array.isArray(recipe.recipe_tags)
+              ? recipe.recipe_tags
+              : JSON.parse(recipe.recipe_tags);
 
             return (
               <div key={recipe.id} className="mt-2">

@@ -7,7 +7,7 @@ import { useState } from "react";
 import "./favouritebutton.css";
 import AddFavourite from "./FavouriteServer";
 
-export default function FavouriteButton({ clerk_id, recipe_id }) {
+export default function FavouriteButton({ recipe_id }) {
   // const [btnClass, setBtnClass] = useState(false);
   const [btnColor, setBtnColor] = useState("white");
 
@@ -17,7 +17,7 @@ export default function FavouriteButton({ clerk_id, recipe_id }) {
     // Toggle the button color
     setBtnColor(btnColor === "white" ? "red" : "white");
 
-    await AddFavourite(clerk_id, recipe_id);
+    await AddFavourite(recipe_id);
   };
   return (
     <>

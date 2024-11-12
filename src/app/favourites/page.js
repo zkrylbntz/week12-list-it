@@ -1,5 +1,5 @@
 import BasketButton from "@/components/BasketButton";
-import FavouriteButton from "@/components/FavouriteButton";
+import FavouriteClient from "@/components/FavouriteClient";
 
 export default function Favourites() {
   return (
@@ -9,7 +9,7 @@ export default function Favourites() {
       <br />
 
       <h1>These are your favourites</h1>
-      <FavouriteButton />
+      <FavouriteClient />
       <BasketButton />
     </>
   );

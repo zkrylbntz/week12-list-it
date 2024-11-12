@@ -1,17 +1,20 @@
 "use client";
 
-import { BiSolidHeartCircle } from "react-icons/bi";
+// import { BiSolidHeartCircle } from "react-icons/bi";
+import { auth } from "@clerk/nextjs/server";
 
 import { useState } from "react";
 import "./favouritebutton.css";
-// import clsx from "clsx";
 
-export default function FavouriteButton() {
-  const [btnClass, setBtnClass] = useState(false);
+export default function FavouriteButton({ clerk_id, recipe_id }) {
+  // const [btnClass, setBtnClass] = useState(false);
   const [btnColor, setBtnColor] = useState("white");
+
+  const handleFavouriteSubmit = (clerk_id, recipe_id);
+
   return (
     <>
-      <button
+      {/* <button
         className="favourite-button"
         //   formAction={addfavourite}
         onClick={() => {
@@ -20,9 +23,9 @@ export default function FavouriteButton() {
         style={{ backgroundColor: btnColor }}
       >
         <BiSolidHeartCircle size={24} />
-      </button>
-      <br />
+      </button> */}
       <button
+        type="submit"
         className="btn"
         onClick={() => {
           btnColor === "white" ? setBtnColor("red") : setBtnColor("white");

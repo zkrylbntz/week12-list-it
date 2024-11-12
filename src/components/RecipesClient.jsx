@@ -8,10 +8,17 @@ import FavouriteClient from "./FavouriteClient";
 
 import Link from "next/link";
 import BasketButton from "./BasketButton";
+
+
 import FavouriteButton from "./FavouriteClient";
 import { auth } from "@clerk/nextjs/server";
 
-export default function RecipesClient({ recipes, availableTags }) {
+
+export default function RecipesClient({
+  recipes,
+  availableTags,
+  handleWeeklyShop,
+}) {
   const [filteredRecipes, setFilteredRecipes] = useState(recipes);
   const [isWeeklyShopStarted, setIsWeeklyShopStarted] = useState(false);
 
@@ -52,6 +59,8 @@ export default function RecipesClient({ recipes, availableTags }) {
     setIsWeeklyShopStarted(true);
   };
 
+  // const handleWeeklyShop = (recipe)=>
+
   return (
     <div>
       <button onClick={handleStartWeeklyShop}>Start Weekly Shop</button>
@@ -83,7 +92,7 @@ export default function RecipesClient({ recipes, availableTags }) {
                 <p>Full Cook Time: {recipe.full_cook_time}</p>
                 {isWeeklyShopStarted && (
                   <div>
-                    <BasketButton />
+                    <BasketButton onClick={handleWeeklyShop} />
                   </div>
                 )}
                 <FavouriteButton recipe_id={recipe.id} />

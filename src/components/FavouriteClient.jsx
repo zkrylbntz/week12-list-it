@@ -5,13 +5,20 @@ import { auth } from "@clerk/nextjs/server";
 
 import { useState } from "react";
 import "./favouritebutton.css";
+import AddFavourite from "./FavouriteServer";
 
 export default function FavouriteButton({ clerk_id, recipe_id }) {
   // const [btnClass, setBtnClass] = useState(false);
   const [btnColor, setBtnColor] = useState("white");
 
-  const handleFavouriteSubmit = (clerk_id, recipe_id);
+  // const handleFavouriteSubmit = (clerk_id, recipe_id);
 
+  const handleFavouriteSubmit = async () => {
+    // Toggle the button color
+    setBtnColor(btnColor === "white" ? "red" : "white");
+
+    await AddFavourite(clerk_id, recipe_id);
+  };
   return (
     <>
       {/* <button
@@ -27,9 +34,10 @@ export default function FavouriteButton({ clerk_id, recipe_id }) {
       <button
         type="submit"
         className="btn"
-        onClick={() => {
-          btnColor === "white" ? setBtnColor("red") : setBtnColor("white");
-        }}
+        // onClick={() => {
+        //   btnColor === "white" ? setBtnColor("red") : setBtnColor("white");
+        // }}
+        onClick={handleFavouriteSubmit}
         style={{ backgroundColor: btnColor }}
       >
         <svg

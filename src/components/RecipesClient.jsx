@@ -8,7 +8,8 @@ import FavouriteClient from "./FavouriteClient";
 
 import Link from "next/link";
 import BasketButton from "./BasketButton";
-
+import FavouriteButton from "./FavouriteClient";
+import { auth } from "@clerk/nextjs/server";
 
 export default function RecipesClient({ recipes, availableTags }) {
   const [filteredRecipes, setFilteredRecipes] = useState(recipes);
@@ -85,6 +86,7 @@ export default function RecipesClient({ recipes, availableTags }) {
                     <BasketButton />
                   </div>
                 )}
+                <FavouriteButton recipe_id={recipe.id} />
               </div>
             );
           })

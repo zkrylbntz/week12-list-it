@@ -9,10 +9,8 @@ import FavouriteClient from "./FavouriteClient";
 import Link from "next/link";
 import BasketButton from "./BasketButton";
 
-
 import FavouriteButton from "./FavouriteClient";
 import { auth } from "@clerk/nextjs/server";
-
 
 export default function RecipesClient({
   recipes,
@@ -25,7 +23,6 @@ export default function RecipesClient({
   const [selectedTags, setSelectedTags] = useState([]); // Add selectedTags state
 
   const [isWeeklyShopStarted, setIsWeeklyShopStarted] = useState(false);
-
 
   const handleFilterChange = (tags) => {
     setSelectedTags(tags); // Update selected tags state
@@ -69,7 +66,6 @@ export default function RecipesClient({
 
   return (
     <div>
-
       {/* Search bar for recipe names */}
       <input
         type="text"

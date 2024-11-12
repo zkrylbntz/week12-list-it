@@ -54,7 +54,7 @@ export default function Header() {
               id="navButtonDrop"
             >
               <li>
-                <Link className={RobotoFlex.className} href="/Settings">
+                <Link className={RobotoFlex.className} href="/updateProfile">
                   Settings
                 </Link>
               </li>

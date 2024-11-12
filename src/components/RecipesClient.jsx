@@ -3,10 +3,16 @@
 import { useState } from "react";
 import Image from "next/image";
 import RecipeFilter from "./RecipeFilter";
+
 import FavouriteClient from "./FavouriteClient";
+
+import Link from "next/link";
+import BasketButton from "./BasketButton";
+
 
 export default function RecipesClient({ recipes, availableTags }) {
   const [filteredRecipes, setFilteredRecipes] = useState(recipes);
+  const [isWeeklyShopStarted, setIsWeeklyShopStarted] = useState(false);
 
   const handleFilterChange = (selectedTags) => {
     if (selectedTags.length === 0) {
@@ -41,8 +47,13 @@ export default function RecipesClient({ recipes, availableTags }) {
     }
   };
 
+  const handleStartWeeklyShop = () => {
+    setIsWeeklyShopStarted(true);
+  };
+
   return (
     <div>
+      <button onClick={handleStartWeeklyShop}>Start Weekly Shop</button>
       <RecipeFilter tags={availableTags} onFilterChange={handleFilterChange} />
       <div>
         {filteredRecipes.length > 0 ? (
@@ -59,32 +70,21 @@ export default function RecipesClient({ recipes, availableTags }) {
 
             return (
               <div key={recipe.id} className="mt-2">
-                <Image
-                  src={recipe.image}
-                  alt={recipe.name}
-                  width={200}
-                  height={200}
-                />
-                <h2>{recipe.name}</h2>
-                <ul>
-                  <h2>INGREDIENTS</h2>
-                  {ingredients.map((ingredient, index) => (
-                    <li key={index}>
-                      {ingredient.name} {ingredient.prep}
-                    </li>
-                  ))}
-                </ul>
-                <p>Instructions: {recipe.instructions}</p>
-                <p>Prep Time: {recipe.prep_time}</p>
-                <p>Cook Time: {recipe.cook_time}</p>
+                <Link href={`/recipesPage/${recipe.id}`}>
+                  <Image
+                    src={recipe.image}
+                    alt={recipe.name}
+                    width={200}
+                    height={200}
+                  />
+                </Link>
+                <Link href={`/recipesPage/${recipe.id}`}>{recipe.name}</Link>
                 <p>Full Cook Time: {recipe.full_cook_time}</p>
-                <p>Servings: {recipe.servings}</p>
-                <ul>
-                  Recipe Tags:
-                  {recipeTags.map((recipe_tag, index) => (
-                    <li key={index}>{recipe_tag}</li>
-                  ))}
-                </ul>
+                {isWeeklyShopStarted && (
+                  <div>
+                    <BasketButton />
+                  </div>
+                )}
               </div>
             );
           })

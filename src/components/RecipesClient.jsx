@@ -3,6 +3,7 @@
 import { useState } from "react";
 import Image from "next/image";
 import RecipeFilter from "./RecipeFilter";
+import Link from "next/link";
 
 export default function RecipesClient({ recipes, availableTags }) {
   const [filteredRecipes, setFilteredRecipes] = useState(recipes);
@@ -58,13 +59,15 @@ export default function RecipesClient({ recipes, availableTags }) {
 
             return (
               <div key={recipe.id} className="mt-2">
-                <Image
-                  src={recipe.image}
-                  alt={recipe.name}
-                  width={200}
-                  height={200}
-                />
-                <h2>{recipe.name}</h2>
+                <Link href={`/recipesPage/${recipe.id}`}>
+                  <Image
+                    src={recipe.image}
+                    alt={recipe.name}
+                    width={200}
+                    height={200}
+                  />
+                </Link>
+                <Link href={`/recipesPage/${recipe.id}`}>{recipe.name}</Link>
                 <ul>
                   <h2>INGREDIENTS</h2>
                   {ingredients.map((ingredient, index) => (

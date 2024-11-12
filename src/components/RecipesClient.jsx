@@ -3,8 +3,12 @@
 import { useState } from "react";
 import Image from "next/image";
 import RecipeFilter from "./RecipeFilter";
+
+import FavouriteClient from "./FavouriteClient";
+
 import Link from "next/link";
 import BasketButton from "./BasketButton";
+
 
 export default function RecipesClient({ recipes, availableTags }) {
   const [filteredRecipes, setFilteredRecipes] = useState(recipes);

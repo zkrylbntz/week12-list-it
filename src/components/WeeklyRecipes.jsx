@@ -1,6 +1,8 @@
 import Image from "next/image";
 import { db } from "@/utils/dbConnection";
 import { auth } from "@clerk/nextjs/server";
+import { redirect } from "next/navigation";
+import { revalidatePath } from "next/cache";
 import getCurrentSessionId from "@/utils/currentSession";
 import Link from "next/link";
 
@@ -17,6 +19,17 @@ WHERE user_clerk_id = $1 AND  session_id = $2 ;`,
   console.log(recipes_results);
 
   const recipes = recipes_results.rows;
+
+  async function handleDelete(formValues) {
+    "use server";
+    const recipe_id = formValues.get("id");
+    const deleteSticky = await db.query(
+      `DELETE FROM weekly WHERE recipe_id = $1 AND user_clerk_id = $2`,
+      [recipe_id, userId]
+    );
+    revalidatePath(`/WeeklyMeals`);
+    redirect(`/WeeklyMeals`);
+  }
   return (
     <>
       {recipes.map((recipe) => {
@@ -31,6 +44,10 @@ WHERE user_clerk_id = $1 AND  session_id = $2 ;`,
               />
             </Link>
             <h2>{recipe.name}</h2>
+            <form action={handleDelete} key={recipe.id}>
+              <input type="hidden" name="id" value={recipe.id} />
+              <button type="submit">Remove from Weekly</button>
+            </form>
           </div>
         );
       })}

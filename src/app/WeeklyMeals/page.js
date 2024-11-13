@@ -6,11 +6,10 @@ export default function WeeklyMeals() {
       <br />
       <br />
       <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <h1>These are your weekly recipes </h1>
+
+      <h1 className="text-2xl text-center p-5 m-5 ">
+        These are your weekly recipes{" "}
+      </h1>
       <WeeklyRecipes />
     </>
   );

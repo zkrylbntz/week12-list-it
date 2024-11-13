@@ -31,29 +31,56 @@ WHERE user_clerk_id = $1 AND  session_id = $2 ;`,
     redirect(`/WeeklyMeals`);
   }
   return (
-    <>
-      {recipes.map((recipe) => {
-        return (
-          <div key={recipe.id}>
+    <div className="flex flex-col items-center space-y-5 m-5">
+      <Link href={`/list`}>
+        <button className="btn btn-active btn-accent btn-lg">
+          Shopping List
+        </button>
+      </Link>
+      {recipes.length > 0 ? (
+        recipes.map((recipe) => (
+          <div key={recipe.id} className="flex flex-col items-center">
+            <h2 className="text-xl p-5">{recipe.name}</h2>
             <Link href={`/recipesPage/${recipe.id}`}>
               <Image
                 src={recipe.image}
                 alt={recipe.name}
-                width={200}
-                height={200}
+                width={250}
+                height={250}
               />
             </Link>
-            <h2>{recipe.name}</h2>
+
             <form action={handleDelete} key={recipe.id}>
               <input type="hidden" name="id" value={recipe.id} />
-              <button type="submit">Remove from Weekly</button>
+              <button type="submit" className="btn btn-error m-5">
+                Remove from Weekly
+              </button>
             </form>
           </div>
-        );
-      })}
-      <Link href={`/list`}>
-        <button>Click here, to see your shopping list</button>
-      </Link>
-    </>
+        ))
+      ) : (
+        <div>
+          <div className="card bg-base-100 w-96 shadow-xl">
+            <figure>
+              <Image
+                src="/emptyPlate.jpg"
+                alt="empty plate, no food here"
+                height={400}
+                width={640}
+              />
+            </figure>
+            <div className="card-body">
+              <h2 className="card-title">Oops no recipes!</h2>
+              <p>Choose your recipes for your weekly shop</p>
+              <div className="card-actions justify-end">
+                <Link href={`/recipesPage`}>
+                  <button className="btn btn-primary">Click Here</button>{" "}
+                </Link>
+              </div>
+            </div>
+          </div>
+        </div>
+      )}
+    </div>
   );
 }

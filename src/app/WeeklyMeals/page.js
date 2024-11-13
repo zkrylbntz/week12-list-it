@@ -7,7 +7,7 @@ export default function WeeklyMeals() {
       <br />
       <br />
 
-      <h1 className="text-2xl text-center p-5 m-5 ">
+      <h1 className="text-2xl text-center pt-5 mt-5 text-white">
         These are your weekly recipes{" "}
       </h1>
       <WeeklyRecipes />

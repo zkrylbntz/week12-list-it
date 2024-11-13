@@ -26,6 +26,9 @@ WHERE user_clerk_id = $1 AND  session_id = $2 ;`,
               return (
                 <ul key={recipe.id + "-" + ingredient.name}>
                   <li>
+
+                    <input type="checkbox" className="checkbox" />
+
                     {ingredient.amount} {ingredient.name} {ingredient.prep}
                   </li>
                 </ul>

@@ -6,7 +6,13 @@ import RecipeFilter from "./RecipeFilter";
 
 import Link from "next/link";
 import BasketButton from "./BasketButton";
+
+
 import FavouriteButton from "./FavouriteClient";
+import { auth } from "@clerk/nextjs/server";
+
+import FavouriteButton from "./FavouriteClient";
+
 
 export default function RecipesClient({
   recipes,

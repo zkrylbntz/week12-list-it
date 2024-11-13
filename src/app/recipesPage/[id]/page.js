@@ -1,6 +1,20 @@
 import { db } from "@/utils/dbConnection";
 import Image from "next/image";
 
+export async function generateMetadata({ params }) {
+  const myParams = await params;
+
+  const { rows: recipes } = await db.query(
+    `SELECT * FROM recipes WHERE id = ${myParams.id}`
+  );
+  const recipe = recipes[0];
+
+  return {
+    title: `${recipe.name}`,
+    description: `This is a recipe for ${recipe.name}. Like the sound of it? Add it to your list and buy it on your next shop!`,
+  };
+}
+
 export default async function SingleRecipePage({ params }) {
   const recipes = (
     await db.query(`SELECT * FROM recipes WHERE id = ${params.id}`)

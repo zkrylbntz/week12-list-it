@@ -1,5 +1,6 @@
 "use client";
 
+import "./recipesPage.css";
 import { useState } from "react";
 import Image from "next/image";
 import RecipeFilter from "./RecipeFilter";
@@ -61,25 +62,29 @@ export default function RecipesClient({ recipes, availableTags }) {
 
     return (
       <div>
-        {/* Search bar for recipe names */}
-        <input
-          type="text"
-          size={100}
-          placeholder="Search by recipe name..."
-          value={searchTerm}
-          onChange={handleSearchChange}
-          className="w-full"
-        />
-        <button onClick={handleStartWeeklyShop}>Start Weekly Shop</button>
-
-        {/* Tag-based filters */}
+        <div className="search-filter-container">
+          <input
+            type="text"
+            size={100}
+            placeholder="Search by recipe name..."
+            value={searchTerm}
+            onChange={handleSearchChange}
+            className="search-input"
+          />
+          <button
+            onClick={handleStartWeeklyShop}
+            className="weekly-shop-button"
+          >
+            Start Weekly Shop
+          </button>
+        </div>
 
         <RecipeFilter
           tags={availableTags}
           onFilterChange={handleFilterChange}
         />
 
-        <div>
+        <div className="recipes-container">
           {filteredRecipes.length > 0 ? (
             filteredRecipes.map((recipe) => {
               const ingredients = Array.isArray(recipe.ingredients)
@@ -90,23 +95,31 @@ export default function RecipesClient({ recipes, availableTags }) {
                 : JSON.parse(recipe.recipe_tags);
 
               return (
-                <div key={recipe.id} className="mt-2">
+                <div key={recipe.id} className="recipe-card">
                   <Link href={`/recipesPage/${recipe.id}`}>
                     <Image
                       src={recipe.image}
                       alt={recipe.name}
                       width={200}
                       height={200}
+                      className="recipe-image"
                     />
                   </Link>
-                  <Link href={`/recipesPage/${recipe.id}`}>{recipe.name}</Link>
-                  <p>Full Cook Time: {recipe.full_cook_time}</p>
-                  {isWeeklyShopStarted && (
-                    <div>
+                  <div className="card-content">
+                    <Link
+                      href={`/recipesPage/${recipe.id}`}
+                      className="recipe-name"
+                    >
+                      {recipe.name}
+                    </Link>
+                    <p className="cook-time">
+                      Full Cook Time: {recipe.full_cook_time}
+                    </p>
+                    {isWeeklyShopStarted && (
                       <BasketButton recipe_id={recipe.id} />
-                    </div>
-                  )}
-                  <FavouriteButton recipe_id={recipe.id} />
+                    )}
+                    <FavouriteButton recipe_id={recipe.id} />
+                  </div>
                 </div>
               );
             })

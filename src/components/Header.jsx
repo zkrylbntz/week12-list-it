@@ -83,7 +83,7 @@ export default function Header() {
           <Link
             id="navButton3"
             className={RobotoFlex.className}
-            href="/Ingredients"
+            href="/ingredients"
           >
             Ingredients
           </Link>

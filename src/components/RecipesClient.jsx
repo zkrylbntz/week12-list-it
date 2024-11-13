@@ -4,13 +4,15 @@ import { useState } from "react";
 import Image from "next/image";
 import RecipeFilter from "./RecipeFilter";
 
-import FavouriteClient from "./FavouriteClient";
-
 import Link from "next/link";
 import BasketButton from "./BasketButton";
 
+
 import FavouriteButton from "./FavouriteClient";
 import { auth } from "@clerk/nextjs/server";
+
+import FavouriteButton from "./FavouriteClient";
+
 
 export default function RecipesClient({
   recipes,

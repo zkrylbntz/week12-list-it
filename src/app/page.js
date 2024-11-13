@@ -26,6 +26,31 @@ export default function Home() {
           </h1>
         </div>
       </div>
+
+      <div className="card glass w-96 relative z-10">
+        <div className="card-body">
+          <h2 className="card-title">Meal Planning Made Simple!</h2>
+          <h3>Welcome to List It!</h3>
+          <p>
+            Your personal assistant to delicious, nutritious meals. Planning
+            your shop doesn&apos;t have to be hard! With List It, you&apos;ll
+            have access to a wide array of recipes that fit your lifestyle.
+            Whether you&apos;re vegan, pescatarian, or simply looking for good
+            eats, we&apos;ve got recipes to match. Our app helps you save time,
+            reduce food waste, and cook meals that nourish you and your family.
+          </p>
+          <ul>
+            Key features of List It:
+            <li>Easy search for recipes by dietary preference</li>
+            <li>Personalised meal recommendations</li>
+            <li>Generates your shopping list from your selected recipes</li>
+            <li>Saves your favourites for later</li>
+          </ul>
+          <p>Discover delicious ways to eat healthier with List It!</p>
+
+          <div className=""></div>
+        </div>
+      </div>
     </div>
   );
 }

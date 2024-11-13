@@ -6,8 +6,15 @@ export default function ListIngredients() {
       <br />
       <br />
       <br />
+      <br />
+      <br />
+      <br />
 
-      <h1>Ingredients list: </h1>
+      <div className="flex flex-col items-center">
+        <button className="btn btn-active btn-primary text-4xl">
+          Ingredients List
+        </button>
+      </div>
       <List />
     </>
   );

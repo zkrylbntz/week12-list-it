@@ -1,6 +1,6 @@
 "use client";
 
-// import { BiSolidHeartCircle } from "react-icons/bi";
+import { BiSolidHeartCircle } from "react-icons/bi";
 
 import { useState } from "react";
 import "./favouritebutton.css";

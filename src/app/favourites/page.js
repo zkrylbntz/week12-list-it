@@ -1,6 +1,8 @@
 import { db } from "@/utils/dbConnection";
 import Image from "next/image";
 import Link from "next/link";
+import { redirect } from "next/navigation";
+import { revalidatePath } from "next/cache";
 import { auth } from "@clerk/nextjs/server";
 
 export default async function Favourites() {
@@ -11,6 +13,17 @@ export default async function Favourites() {
       [userId]
     )
   ).rows;
+
+  async function handleDelete(formValues) {
+    "use server";
+    const recipe_id = formValues.get("id");
+    const deleteFavourite = await db.query(
+      `DELETE FROM favourites WHERE recipe_id = $1 AND user_clerk_id = $2`,
+      [recipe_id, userId]
+    );
+    revalidatePath(`/favourites`);
+    redirect(`/favourites`);
+  }
 
   return (
     <>
@@ -32,6 +45,10 @@ export default async function Favourites() {
           </Link>
           <Link href={`/recipesPage/${recipe.id}`}>{recipe.name}</Link>
           <p>Full Cook Time: {recipe.full_cook_time}</p>
+          <form action={handleDelete} key={recipe.id}>
+            <input type="hidden" name="id" value={recipe.id} />
+            <button type="submit">Remove from Favourites</button>
+          </form>
         </div>
       ))}
     </>

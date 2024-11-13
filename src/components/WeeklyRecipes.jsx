@@ -23,7 +23,7 @@ WHERE user_clerk_id = $1 AND  session_id = $2 ;`,
   async function handleDelete(formValues) {
     "use server";
     const recipe_id = formValues.get("id");
-    const deleteSticky = await db.query(
+    const deleteWeekly = await db.query(
       `DELETE FROM weekly WHERE recipe_id = $1 AND user_clerk_id = $2`,
       [recipe_id, userId]
     );

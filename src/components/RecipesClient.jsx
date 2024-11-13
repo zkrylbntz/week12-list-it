@@ -10,114 +10,111 @@ import BasketButton from "./BasketButton";
 import FavouriteButton from "./FavouriteClient";
 import addSession from "./SessionServer";
 
-
 export default function RecipesClient({ recipes, availableTags }) {
+  {
+    const [filteredRecipes, setFilteredRecipes] = useState(recipes);
 
-export default function RecipesClient({
-  recipes,
-  availableTags,
-  handleWeeklyShop,
-}) {
+    const [searchTerm, setSearchTerm] = useState("");
+    const [selectedTags, setSelectedTags] = useState([]); // Add selectedTags state
 
-  const [filteredRecipes, setFilteredRecipes] = useState(recipes);
+    const [isWeeklyShopStarted, setIsWeeklyShopStarted] = useState(false);
 
-  const [searchTerm, setSearchTerm] = useState("");
-  const [selectedTags, setSelectedTags] = useState([]); // Add selectedTags state
+    const handleFilterChange = (tags) => {
+      setSelectedTags(tags); // Update selected tags state
 
-  const [isWeeklyShopStarted, setIsWeeklyShopStarted] = useState(false);
+      const lowerCaseSearchTerm = searchTerm.toLowerCase();
 
-  const handleFilterChange = (tags) => {
-    setSelectedTags(tags); // Update selected tags state
+      const filtered = recipes.filter((recipe) => {
+        // Check if recipe matches selected tags
+        const matchesTags =
+          tags.length === 0 ||
+          tags.every((tag) =>
+            recipe.recipe_tags.some((recipeTag) =>
+              recipeTag.toLowerCase().includes(tag.toLowerCase())
+            )
+          );
 
-    const lowerCaseSearchTerm = searchTerm.toLowerCase();
+        // Check if recipe name includes the search term
+        const matchesSearchTerm = recipe.name
+          .toLowerCase()
+          .includes(lowerCaseSearchTerm);
 
-    const filtered = recipes.filter((recipe) => {
-      // Check if recipe matches selected tags
-      const matchesTags =
-        tags.length === 0 ||
-        tags.every((tag) =>
-          recipe.recipe_tags.some((recipeTag) =>
-            recipeTag.toLowerCase().includes(tag.toLowerCase())
-          )
-        );
+        return matchesTags && matchesSearchTerm;
+      });
 
-      // Check if recipe name includes the search term
-      const matchesSearchTerm = recipe.name
-        .toLowerCase()
-        .includes(lowerCaseSearchTerm);
+      setFilteredRecipes(filtered);
+    };
 
-      return matchesTags && matchesSearchTerm;
-    });
+    const handleSearchChange = (e) => {
+      const term = e.target.value;
+      setSearchTerm(term);
 
-    setFilteredRecipes(filtered);
-  };
+      // Trigger filtering with the updated search term and current tags
+      handleFilterChange(selectedTags);
+    };
 
-  const handleSearchChange = (e) => {
-    const term = e.target.value;
-    setSearchTerm(term);
+    const handleStartWeeklyShop = async () => {
+      setIsWeeklyShopStarted(true);
 
-    // Trigger filtering with the updated search term and current tags
-    handleFilterChange(selectedTags);
-  };
+      await addSession();
+    };
 
-  const handleStartWeeklyShop = async () => {
-    setIsWeeklyShopStarted(true);
-
-    await addSession();
-  };
-
-  return (
-    <div>
-      {/* Search bar for recipe names */}
-      <input
-        type="text"
-        size={100}
-        placeholder="Search by recipe name..."
-        value={searchTerm}
-        onChange={handleSearchChange}
-        className="w-full"
-      />
-      <button onClick={handleStartWeeklyShop}>Start Weekly Shop</button>
-
-      {/* Tag-based filters */}
-
-      <RecipeFilter tags={availableTags} onFilterChange={handleFilterChange} />
-
+    return (
       <div>
-        {filteredRecipes.length > 0 ? (
-          filteredRecipes.map((recipe) => {
-            const ingredients = Array.isArray(recipe.ingredients)
-              ? recipe.ingredients
-              : JSON.parse(recipe.ingredients);
-            const recipeTags = Array.isArray(recipe.recipe_tags)
-              ? recipe.recipe_tags
-              : JSON.parse(recipe.recipe_tags);
+        {/* Search bar for recipe names */}
+        <input
+          type="text"
+          size={100}
+          placeholder="Search by recipe name..."
+          value={searchTerm}
+          onChange={handleSearchChange}
+          className="w-full"
+        />
+        <button onClick={handleStartWeeklyShop}>Start Weekly Shop</button>
 
-            return (
-              <div key={recipe.id} className="mt-2">
-                <Link href={`/recipesPage/${recipe.id}`}>
-                  <Image
-                    src={recipe.image}
-                    alt={recipe.name}
-                    width={200}
-                    height={200}
-                  />
-                </Link>
-                <Link href={`/recipesPage/${recipe.id}`}>{recipe.name}</Link>
-                <p>Full Cook Time: {recipe.full_cook_time}</p>
-                {isWeeklyShopStarted && (
-                  <div>
-                    <BasketButton recipe_id={recipe.id} />
-                  </div>
-                )}
-                <FavouriteButton recipe_id={recipe.id} />
-              </div>
-            );
-          })
-        ) : (
-          <p>No recipes found.</p>
-        )}
+        {/* Tag-based filters */}
+
+        <RecipeFilter
+          tags={availableTags}
+          onFilterChange={handleFilterChange}
+        />
+
+        <div>
+          {filteredRecipes.length > 0 ? (
+            filteredRecipes.map((recipe) => {
+              const ingredients = Array.isArray(recipe.ingredients)
+                ? recipe.ingredients
+                : JSON.parse(recipe.ingredients);
+              const recipeTags = Array.isArray(recipe.recipe_tags)
+                ? recipe.recipe_tags
+                : JSON.parse(recipe.recipe_tags);
+
+              return (
+                <div key={recipe.id} className="mt-2">
+                  <Link href={`/recipesPage/${recipe.id}`}>
+                    <Image
+                      src={recipe.image}
+                      alt={recipe.name}
+                      width={200}
+                      height={200}
+                    />
+                  </Link>
+                  <Link href={`/recipesPage/${recipe.id}`}>{recipe.name}</Link>
+                  <p>Full Cook Time: {recipe.full_cook_time}</p>
+                  {isWeeklyShopStarted && (
+                    <div>
+                      <BasketButton recipe_id={recipe.id} />
+                    </div>
+                  )}
+                  <FavouriteButton recipe_id={recipe.id} />
+                </div>
+              );
+            })
+          ) : (
+            <p>No recipes found.</p>
+          )}
+        </div>
       </div>
-    </div>
-  );
+    );
+  }
 }

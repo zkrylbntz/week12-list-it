@@ -38,3 +38,12 @@ export default async function SingleRecipePage({ params }) {
     </>
   );
 }
+
+// export async function generateMetadata({ params }) {
+//   const recipes = (
+//     await db.query(`SELECT name FROM recipes WHERE id = ${params.id}`)
+//   ).rows;
+//   return {
+//     title: `${recipes[0].name}`,
+//   };
+// }

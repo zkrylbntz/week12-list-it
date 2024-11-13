@@ -47,7 +47,9 @@ export default async function Favourites() {
           <p>Full Cook Time: {recipe.full_cook_time}</p>
           <form action={handleDelete} key={recipe.id}>
             <input type="hidden" name="id" value={recipe.id} />
-            <button type="submit">Remove from Favourites</button>
+            <button className="btn btn-error" type="submit">
+              Remove from Favourites
+            </button>
           </form>
         </div>
       ))}

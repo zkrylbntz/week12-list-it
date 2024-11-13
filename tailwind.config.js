@@ -5,6 +5,7 @@ module.exports = {
     "./src/components/**/*.{js,ts,jsx,tsx,mdx}",
     "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
   ],
+  plugins: [require("daisyui")],
   theme: {
     extend: {
       colors: {
@@ -13,5 +14,9 @@ module.exports = {
       },
     },
   },
-  plugins: [require("daisyui")],
+
+  daisyui: {
+    themes: ["bumblee", "coffee"],
+  },
+  darkMode: ["selector", '[data-theme="coffee"]'],
 };

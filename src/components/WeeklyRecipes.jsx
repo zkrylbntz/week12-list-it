@@ -51,6 +51,9 @@ WHERE user_clerk_id = $1 AND  session_id = $2 ;`,
           </div>
         );
       })}
+      <Link href={`/list`}>
+        <button>Click here, to see your shopping list</button>
+      </Link>
     </>
   );
 }

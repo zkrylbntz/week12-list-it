@@ -1,36 +1,38 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+Project name:
+Vercel link:
+Repo link:
 
-## Getting Started
+Team members:
 
-First, run the development server:
+Project description:
+A site which both allows you to create a virtual pantry of all the food items in your house and see which recipes you might want to cook using those ingredients.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+Problem domain:
+People can't always remember what food items they have in their houses, and coming up with recipe ideas isn't always easy.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+User stories:
+As a user, I want to see a list of the items I have in my pantry.
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+Wireframe:
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+A list of any libraries, frameworks, or packages that your application requires in order to properly function:
+Express.js, pg, cors...
 
-## Learn More
+Instructions on how to run your app:
 
-To learn more about Next.js, take a look at the following resources:
+Lighthouse report:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Reflections:
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+Please mention the requirements you met and which goals you achieved for this assignment.
 
-## Deploy on Vercel
+🎯 Were there any requirements or goals that you were not quite able to achieve?
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+🎯 If so, could you please tell us what was it that you found difficult about these tasks?
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+What went really well and what could have gone better?
+Detailing useful external sources that helped you complete the assignment (e.g Youtube tutorials).
+Describing errors or bugs you encountered while completing your assignment.
+
+References:
+Third-party APIs, CSS resets, icons, images...

@@ -7,8 +7,7 @@
     "dev": "next dev --turbopack",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint",
-    "seed": "node src/utils/seed.js"
+    "lint": "next lint"
   },
   "dependencies": {
     "@clerk/nextjs": "^6.3.0",

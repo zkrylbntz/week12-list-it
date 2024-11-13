@@ -4,16 +4,21 @@ import { useState } from "react";
 import Image from "next/image";
 import RecipeFilter from "./RecipeFilter";
 
-import FavouriteClient from "./FavouriteClient";
-
 import Link from "next/link";
 import BasketButton from "./BasketButton";
 
 import FavouriteButton from "./FavouriteClient";
-import { auth } from "@clerk/nextjs/server";
 import addSession from "./SessionServer";
 
+
 export default function RecipesClient({ recipes, availableTags }) {
+
+export default function RecipesClient({
+  recipes,
+  availableTags,
+  handleWeeklyShop,
+}) {
+
   const [filteredRecipes, setFilteredRecipes] = useState(recipes);
 
   const [searchTerm, setSearchTerm] = useState("");

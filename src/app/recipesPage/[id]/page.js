@@ -1,12 +1,7 @@
 import { db } from "@/utils/dbConnection";
-// import pg from "pg";
 import Image from "next/image";
 
 export default async function SingleRecipePage({ params }) {
-  //   const db = new pg.Pool({
-  //     connectionString: process.env.NEXT_PUBLIC_DATABASE_URL,
-  //   });
-
   const recipes = (
     await db.query(`SELECT * FROM recipes WHERE id = ${params.id}`)
   ).rows;

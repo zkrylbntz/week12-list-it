@@ -7,18 +7,18 @@ import RecipeFilter from "./RecipeFilter";
 import Link from "next/link";
 import BasketButton from "./BasketButton";
 
-
 import FavouriteButton from "./FavouriteClient";
-import { auth } from "@clerk/nextjs/server";
+import addSession from "./SessionServer";
 
-import FavouriteButton from "./FavouriteClient";
 
+export default function RecipesClient({ recipes, availableTags }) {
 
 export default function RecipesClient({
   recipes,
   availableTags,
   handleWeeklyShop,
 }) {
+
   const [filteredRecipes, setFilteredRecipes] = useState(recipes);
 
   const [searchTerm, setSearchTerm] = useState("");
@@ -60,11 +60,11 @@ export default function RecipesClient({
     handleFilterChange(selectedTags);
   };
 
-  const handleStartWeeklyShop = () => {
+  const handleStartWeeklyShop = async () => {
     setIsWeeklyShopStarted(true);
-  };
 
-  // const handleWeeklyShop = (recipe)=>
+    await addSession();
+  };
 
   return (
     <div>
@@ -77,10 +77,9 @@ export default function RecipesClient({
         onChange={handleSearchChange}
         className="w-full"
       />
+      <button onClick={handleStartWeeklyShop}>Start Weekly Shop</button>
 
       {/* Tag-based filters */}
-
-      <button onClick={handleStartWeeklyShop}>Start Weekly Shop</button>
 
       <RecipeFilter tags={availableTags} onFilterChange={handleFilterChange} />
 
@@ -108,7 +107,7 @@ export default function RecipesClient({
                 <p>Full Cook Time: {recipe.full_cook_time}</p>
                 {isWeeklyShopStarted && (
                   <div>
-                    <BasketButton onClick={handleWeeklyShop} />
+                    <BasketButton recipe_id={recipe.id} />
                   </div>
                 )}
                 <FavouriteButton recipe_id={recipe.id} />

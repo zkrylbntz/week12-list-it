@@ -18,7 +18,7 @@ export default async function SingleRecipePage({ params }) {
           />
           <ul>
             <p>INGREDIENTS</p>
-            {/* {recipe.ingredients.map((ingredient) => {
+            {recipe.ingredients.map((ingredient) => {
               return (
                 <ul key={recipe.id + "-" + ingredient.name}>
                   <li>
@@ -26,7 +26,7 @@ export default async function SingleRecipePage({ params }) {
                   </li>
                 </ul>
               );
-            })} */}
+            })}
           </ul>
           <p>INSTRUCTIONS: {recipe.instructions}</p>
           <p>PREP TIME: {recipe.prep_time}</p>

@@ -27,7 +27,7 @@ export default function Home() {
         </div>
       </div>
 
-      <div className="card glass w-96 relative z-10">
+      <div className="card glass">
         <div className="card-body">
           <h2 className="card-title">Meal Planning Made Simple!</h2>
           <h3>Welcome to List It!</h3>
@@ -39,7 +39,7 @@ export default function Home() {
             eats, we&apos;ve got recipes to match. Our app helps you save time,
             reduce food waste, and cook meals that nourish you and your family.
           </p>
-          <ul>
+          <ul className={"list-disc list-inside"}>
             Key features of List It:
             <li>Easy search for recipes by dietary preference</li>
             <li>Personalised meal recommendations</li>

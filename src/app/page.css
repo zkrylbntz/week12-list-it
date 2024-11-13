@@ -130,8 +130,19 @@ h1 {
   font-size: 12vw;
   width: 25vw;
   height: 500px;
+  z-index: 10;
 }
 
 .image {
   position: relative;
+}
+
+.card {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 5;
+  max-width: 1000px;
+  color: #391a04;
 }

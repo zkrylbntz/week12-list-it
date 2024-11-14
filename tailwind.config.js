@@ -16,7 +16,7 @@ module.exports = {
   },
 
   daisyui: {
-    themes: ["bumblee", "coffee"],
+    themes: ["coffee"],
   },
   darkMode: ["selector", '[data-theme="coffee"]'],
 };

@@ -1,6 +1,8 @@
 import { db } from "@/utils/dbConnection";
 import Image from "next/image";
 import "./page.css";
+import { redirect } from "next/navigation";
+import { revalidatePath } from "next/cache";
 
 export async function generateMetadata({ params }) {
   const myParams = await params;
@@ -16,6 +18,13 @@ export async function generateMetadata({ params }) {
   };
 }
 
+async function handleRefresh(formValues) {
+  "use server";
+
+  revalidatePath(`/recipesPage `);
+  redirect(`/recipesPage`);
+}
+
 export default async function SingleRecipePage({ params }) {
   const recipes = (
     await db.query(`SELECT * FROM recipes WHERE id = ${params.id}`)
@@ -24,11 +33,22 @@ export default async function SingleRecipePage({ params }) {
     <>
       <br />
       <br />
-      <br />
+
+      <div>
+        <form action={handleRefresh}>
+          <input type="hidden" />
+          <button type="submit" className="btn btn-success m-10">
+            Back to recipes
+          </button>
+        </form>
+      </div>
       <br />
 
-      <div className="recipes-container">
-        <div className="recipe-card">
+
+      <div className="recipes-container2">
+        <div className="recipe-card2">
+
+
           {recipes.map((recipe) => (
             <div key={recipes.id}>
               <div>
@@ -41,16 +61,16 @@ export default async function SingleRecipePage({ params }) {
                   alt={recipe.name}
                   width={300}
                   height={300}
-                  className="recipe-image"
+                  className="recipe-image2"
                 />
                 {/* </div> */}
                 <ul>
-                  <div className="card-content">
-                    <p className="cook-time">INGREDIENTS</p>
+                  <div className="card-content2">
+                    <p className="cook-time2">INGREDIENTS</p>
                     {recipe.ingredients.map((ingredient) => {
                       return (
                         <ul
-                          className="cook-time"
+                          className="cook-time2"
                           key={recipe.id + "-" + ingredient.name}
                         >
                           <li>
@@ -62,16 +82,16 @@ export default async function SingleRecipePage({ params }) {
                     })}
                   </div>
                 </ul>
-                <div className="instructions">
-                  <p className="cook-time">
+                <div className="instructions2">
+                  <p className="cook-time2">
                     INSTRUCTIONS: {recipe.instructions}
                   </p>
-                  <p className="cook-time">PREP TIME: {recipe.prep_time}</p>
-                  <p className="cook-time">COOK TIME: {recipe.cook_time}</p>
-                  <p className="cook-time">
+                  <p className="cook-time2">PREP TIME: {recipe.prep_time}</p>
+                  <p className="cook-time2">COOK TIME: {recipe.cook_time}</p>
+                  <p className="cook-time2">
                     TOTAL TIME: {recipe.full_cook_time}
                   </p>
-                  <p className="cook-time">SERVINGS: {recipe.servings}</p>
+                  <p className="cook-time2">SERVINGS: {recipe.servings}</p>
                 </div>
               </div>
             </div>

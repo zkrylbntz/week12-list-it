@@ -6,7 +6,7 @@
 
 ## Team members:
 
-- Anu, [Anu](https://github.com/anuseed)
+- Anu, https://github.com/anuseed
 - Joe, https://github.com/joegalvinn
 - Kat, https://github.com/kmday404
 - Zak, https://github.com/zkrylbntz
@@ -45,14 +45,14 @@ pg, Daisy UI, tailwindcss, clerk
 2. Set your user details (username and dietary requirements)
 3. Browse the recipes, using the search and filter features if desired
 4. Click "Start Weekly Shop" to enable the feature which allows you to add recipes to your plan
-5. The heart button will add the recipe to your favourites, the cart button will add the recipe to your weekly plan
+5. The heart button will add the recipe to your favourites, the basket button will add the recipe to your weekly plan
 6. You can access your favourites, weekly plan and settings to change your user details from the 'User' drop down in the header
 7. To view the full details of any individual recipe (including instructions, ingredients, servings etc) you can click on the image of the recipe (this works from both the recipe page and weekly meal page)
 8. Access your shopping list from the 'List' header link or use the "view shoppinng list" button in the weekly meal page
 9. If you remove individual recipes from your weekly meals, this will remove the ingredients from your list
 10. To clear your weekly plan and list, you need only start a new weekly shop using the "Start Weekly Shop" button
 
-Lighthouse report:
+### Lighthouse report:
 
 ### Reflections:
 
@@ -76,3 +76,4 @@ Describing errors or bugs you encountered while completing your assignment.
 ### References:
 
 Data originated from https://dummyjson.com/recipes
+Images from https://unsplash.com/ and https://pixabay.com/

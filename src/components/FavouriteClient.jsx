@@ -22,6 +22,7 @@ export default function FavouriteButton({ recipe_id }) {
       <button
         type="submit"
         className="btn"
+        aria-label="add-to-favourite-button"
         onClick={handleFavouriteSubmit}
         disabled={isClicked}
         style={{ backgroundColor: btnColor }}

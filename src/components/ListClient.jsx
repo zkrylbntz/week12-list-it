@@ -20,20 +20,27 @@ WHERE user_clerk_id = $1 AND  session_id = $2 ;`,
   console.log(recipes_results);
 
   const recipes = recipes_results.rows;
+
   return (
-    <div>
-      <div className="card bg-base-100 w-96 shadow-xl">
+    <div className="flex flex-col items-center text-white">
+      <div className="card  bg-orange-600 w-96 shadow-xl">
+        <h2 className="card-title justify-center px-6 py-3 text-2xl">
+          Ingredients List
+        </h2>
         {recipes.length > 0 ? (
-          <div className="content-container">
+          <div className="content-container px-6 py-3">
             {recipes.map((recipe) => (
               <div className="content" key={recipe.id}>
                 {recipe.ingredients.map((ingredient) => (
                   <ul
-                    className="list-text"
+                    className="list-text  pb-1"
                     key={recipe.id + "-" + ingredient.name}
                   >
                     <li>
-                      <input type="checkbox" className="checkbox" />
+                      <input
+                        type="checkbox"
+                        className="checkbox border-white align-middle"
+                      />
                       &nbsp;&nbsp;
                       {ingredient.amount} {ingredient.name} {ingredient.prep}
                     </li>
@@ -71,34 +78,6 @@ WHERE user_clerk_id = $1 AND  session_id = $2 ;`,
             </div>
           </div>
         )}
-      </div>
-
-      <div>
-        <div className="flex flex-col items-center">
-          <div className="card bg-orange-800 w-96 shadow-xl">
-            <div className="card-body">
-              <h2 className="card-title">Ingredients List</h2>
-              {recipes.map((recipe) => {
-                return (
-                  <div key={recipe.id}>
-                    {recipe.ingredients.map((ingredient) => {
-                      return (
-                        <ul key={recipe.id + "-" + ingredient.name}>
-                          <li>
-                            <input type="checkbox" className="checkbox" />
-                            &nbsp;&nbsp;
-                            {ingredient.amount} {ingredient.name}{" "}
-                            {ingredient.prep}
-                          </li>
-                        </ul>
-                      );
-                    })}
-                  </div>
-                );
-              })}
-            </div>
-          </div>
-        </div>
       </div>
     </div>
   );

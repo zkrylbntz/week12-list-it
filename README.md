@@ -56,7 +56,7 @@ pg, Daisy UI, tailwindcss, clerk
 
 ### Reflections:
 
-Additional features:
+**Additional features:**
 [x] As a user, I would like to filter the recipes based on difficulty, food intolerances and meal type
 
 [x] As a user, I would like to search for recipes
@@ -69,11 +69,32 @@ Additional features:
 
 [] As a user, I would like to change the servings and this adjust the ingredient amounts needed
 
-Detailing useful external sources that helped you complete the assignment (e.g Youtube tutorials).
+[] As a user, I would like to be able to view previous weekly shops
 
-Describing errors or bugs you encountered while completing your assignment.
-
-### References:
+### References and resources used:
 
 Data originated from https://dummyjson.com/recipes
+We used https://chatgpt.com/ to help rework the data adding and removing items to fit our app
 Images from https://unsplash.com/ and https://pixabay.com/
+Tech Educators https://techeducators.co.uk/
+https://daisyui.com/
+https://drawsql.app/
+https://okso.app/
+https://excalidraw.com/
+https://cssgrid-generator.netlify.app/
+https://blog.hubspot.com/
+https://www.markdownguide.org/cheat-sheet/
+
+### Errors and bugs we encountered while creating our app:
+
+- key prop indentifiers when adding data to the database
+- inherited CSS properties being carried over
+- incorrect recipe tags
+- errors related to database data types like jsonb
+- path names in our seed folders
+
+Known bugs:
+
+- Favourite and Basket buttons do not stay clicked in when user refreshes page
+- When you go to the list page without having started a session you will get an error
+  _(mostly able to be fixed by using local storage)_

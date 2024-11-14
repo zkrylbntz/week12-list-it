@@ -23,6 +23,7 @@ export default function BasketButton({ recipe_id }) {
       <button
         type="submit"
         className="btn"
+        aria-label="add-to-basket-button"
         onClick={handleWeeklyShop}
         disabled={isClicked}
         style={{ backgroundColor: btnColor }}

@@ -57,6 +57,7 @@ pg, Daisy UI, tailwindcss, clerk
 ### Reflections:
 
 **Additional features:**
+
 [x] As a user, I would like to filter the recipes based on difficulty, food intolerances and meal type
 
 [x] As a user, I would like to search for recipes

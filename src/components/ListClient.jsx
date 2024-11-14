@@ -41,6 +41,7 @@ WHERE user_clerk_id = $1 AND  session_id = $2 ;`,
     //   );
     // })}
     // </div>
+
     <>
       <div className="flex flex-col items-center">
         <div className="card bg-orange-800 w-96 shadow-xl">

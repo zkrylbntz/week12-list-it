@@ -1,0 +1,78 @@
+.sibling {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  grid-column-gap: 5px;
+  grid-row-gap: 5px;
+
+  align-items: center;
+  justify-items: center;
+}
+
+.instructions {
+  grid-area: 2 / 1 / 3 / 3;
+  border-style: solid;
+  border-color: white;
+  border-width: 2px;
+  padding: 10px;
+  margin: 20px;
+}
+
+.recipes-container {
+  /* width: 100vw; */
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.recipe-card {
+  background: RGB(249 115 22);
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: transform 0.2s ease-in-out;
+  text-align: center;
+  width: 60vw;
+}
+
+.recipe-card:hover {
+  transform: scale(1.03);
+}
+
+.recipe-image {
+  /* display: flex;
+  align-items: center;
+  justify-content: center; */
+
+  width: 50%;
+  height: auto;
+  border-bottom: none;
+  grid-area: 1 / 1 / 2 / 2;
+}
+
+.card-content {
+  padding: 15px;
+  grid-area: 1 / 2 / 2 / 3;
+  border-style: solid;
+  border-color: white;
+  border-width: 2px;
+}
+
+.recipe-name {
+  font-size: 1.25rem;
+  font-weight: bold;
+  margin-top: 10px;
+  color: #ffffff;
+  text-decoration: none;
+}
+
+.recipe-name:hover {
+  text-decoration: underline;
+}
+
+.cook-time {
+  font-size: 1rem;
+  color: #ffffff;
+  margin: 5px 0;
+}

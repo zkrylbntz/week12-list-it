@@ -162,7 +162,7 @@ export default function CheckChecked({
 
         <fieldset className="w-full p-4 border border-white rounded-lg">
           <legend className="text-lg font-semibold text-white mb-2">
-            Dietary Requirements
+            Dietary Preferences
           </legend>
           <div className="flex flex-col space-y-3">
             <label className="inline-flex items-center text-white">

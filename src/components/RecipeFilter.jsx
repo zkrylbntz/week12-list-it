@@ -21,25 +21,27 @@ export default function RecipeFilter({ onFilterChange }) {
   };
 
   return (
-    <div className="collapse bg-base-200">
+    <div className="collapse bg-base-200 text-white">
       <input type="checkbox" />
-      <div className="collapse-title text-xl font-medium">Filters</div>
-      <div className="collapse-content">
-        <div>
+      <div className="collapse-title text-xl font-medium bg-orange-500 flex align-middle">
+        Filters
+      </div>
+      <div className="collapse-content bg-orange-700">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
           <div className="filter-group">
-            <h3 className="text-lg font-semibold">Difficulty</h3>
-            <ul>
+            <h3 className="text-lg font-semibold mb-3">Difficulty</h3>
+            <ul className="space-y-2">
               {difficultyTags.map((tag) => (
                 <li key={tag}>
-                  <label>
+                  <label className="inline-flex items-center space-x-2">
                     <input
                       type="checkbox"
                       value={tag}
                       checked={selectedTags.includes(tag)}
                       onChange={() => handleTagChange(tag)}
-                      className="checkbox checkbox-warning border-orange-400"
+                      className="checkbox checkbox-warning border-orange-100"
                     />
-                    {tag}
+                    <span>{tag}</span>
                   </label>
                 </li>
               ))}
@@ -47,19 +49,19 @@ export default function RecipeFilter({ onFilterChange }) {
           </div>
 
           <div className="filter-group">
-            <h3 className="text-lg font-semibold">Intolerances</h3>
-            <ul>
+            <h3 className="text-lg font-semibold mb-3">Intolerances</h3>
+            <ul className="space-y-2">
               {intoleranceTags.map((tag) => (
                 <li key={tag}>
-                  <label>
+                  <label className="inline-flex items-center space-x-2">
                     <input
                       type="checkbox"
                       value={tag}
                       checked={selectedTags.includes(tag)}
                       onChange={() => handleTagChange(tag)}
-                      className="checkbox checkbox-warning border-orange-400"
+                      className="checkbox checkbox-warning border-orange-100"
                     />
-                    {tag}
+                    <span>{tag}</span>
                   </label>
                 </li>
               ))}
@@ -67,19 +69,19 @@ export default function RecipeFilter({ onFilterChange }) {
           </div>
 
           <div className="filter-group">
-            <h3 className="text-lg font-semibold">Meal</h3>
-            <ul>
+            <h3 className="text-lg font-semibold mb-3">Meal</h3>
+            <ul className="space-y-2">
               {mealTags.map((tag) => (
                 <li key={tag}>
-                  <label>
+                  <label className="inline-flex items-center space-x-2">
                     <input
                       type="checkbox"
                       value={tag}
                       checked={selectedTags.includes(tag)}
                       onChange={() => handleTagChange(tag)}
-                      className="checkbox checkbox-warning border-orange-400"
+                      className="checkbox checkbox-warning border-orange-100"
                     />
-                    {tag}
+                    <span>{tag}</span>
                   </label>
                 </li>
               ))}

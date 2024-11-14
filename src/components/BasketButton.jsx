@@ -9,9 +9,11 @@ import AddWeekly from "./WeeklyServer";
 export default function BasketButton({ recipe_id }) {
   const [btnClass, setBtnClass] = useState(false);
   const [btnColor, setBtnColor] = useState("white");
+  const [isClicked, setIsClicked] = useState(false);
 
   const handleWeeklyShop = async () => {
     setBtnColor(btnColor === "white" ? "green" : "white");
+    setIsClicked(true);
 
     await AddWeekly(recipe_id);
   };
@@ -21,8 +23,8 @@ export default function BasketButton({ recipe_id }) {
       <button
         type="submit"
         className="btn"
-        //   formAction={addfavourite}
         onClick={handleWeeklyShop}
+        disabled={isClicked}
         style={{ backgroundColor: btnColor }}
       >
         <GrBasket size={24} />

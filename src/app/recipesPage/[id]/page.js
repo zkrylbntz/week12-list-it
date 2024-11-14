@@ -1,5 +1,6 @@
 import { db } from "@/utils/dbConnection";
 import Image from "next/image";
+import "./page.css";
 
 export async function generateMetadata({ params }) {
   const myParams = await params;
@@ -21,34 +22,62 @@ export default async function SingleRecipePage({ params }) {
   ).rows;
   return (
     <>
-      {recipes.map((recipe) => (
-        <div key={recipe.id} className="p-20">
-          <h2>RECIPE: {recipe.name}</h2>
-          <Image
-            src={recipe.image}
-            alt={recipe.name}
-            width={200}
-            height={200}
-          />
-          <ul>
-            <p>INGREDIENTS</p>
-            {recipe.ingredients.map((ingredient) => {
-              return (
-                <ul key={recipe.id + "-" + ingredient.name}>
-                  <li>
-                    {ingredient.amount} {ingredient.name} {ingredient.prep}
-                  </li>
+      <br />
+      <br />
+      <br />
+      <br />
+
+      <div className="recipes-container">
+        <div className="recipe-card">
+          {recipes.map((recipe) => (
+            <>
+              <div>
+                <h2 className="text-white text-4xl p-5 m-5">{recipe.name}</h2>
+              </div>
+              <div key={recipe.id} className="sibling">
+                {/* <div className="image"> */}
+                <Image
+                  src={recipe.image}
+                  alt={recipe.name}
+                  width={300}
+                  height={300}
+                  className="recipe-image"
+                />
+                {/* </div> */}
+                <ul>
+                  <div className="card-content">
+                    <p className="cook-time">INGREDIENTS</p>
+                    {recipe.ingredients.map((ingredient) => {
+                      return (
+                        <ul
+                          className="cook-time"
+                          key={recipe.id + "-" + ingredient.name}
+                        >
+                          <li>
+                            {ingredient.amount} {ingredient.name}{" "}
+                            {ingredient.prep}
+                          </li>
+                        </ul>
+                      );
+                    })}
+                  </div>
                 </ul>
-              );
-            })}
-          </ul>
-          <p>INSTRUCTIONS: {recipe.instructions}</p>
-          <p>PREP TIME: {recipe.prep_time}</p>
-          <p>COOK TIME: {recipe.cook_time}</p>
-          <p>TOTAL TIME: {recipe.full_cook_time}</p>
-          <p>SERVINGS: {recipe.servings}</p>
+                <div className="instructions">
+                  <p className="cook-time">
+                    INSTRUCTIONS: {recipe.instructions}
+                  </p>
+                  <p className="cook-time">PREP TIME: {recipe.prep_time}</p>
+                  <p className="cook-time">COOK TIME: {recipe.cook_time}</p>
+                  <p className="cook-time">
+                    TOTAL TIME: {recipe.full_cook_time}
+                  </p>
+                  <p className="cook-time">SERVINGS: {recipe.servings}</p>
+                </div>
+              </div>
+            </>
+          ))}
         </div>
-      ))}
+      </div>
     </>
   );
 }

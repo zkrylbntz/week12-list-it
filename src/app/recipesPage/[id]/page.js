@@ -28,9 +28,9 @@ export default async function SingleRecipePage({ params }) {
       <br />
 
       <div className="recipes-container">
-        <div key={recipes.id} className="recipe-card">
+        <div className="recipe-card">
           {recipes.map((recipe) => (
-            <>
+            <div key={recipes.id}>
               <div>
                 <h2 className="text-white text-4xl p-5 m-5">{recipe.name}</h2>
               </div>
@@ -74,7 +74,7 @@ export default async function SingleRecipePage({ params }) {
                   <p className="cook-time">SERVINGS: {recipe.servings}</p>
                 </div>
               </div>
-            </>
+            </div>
           ))}
         </div>
       </div>

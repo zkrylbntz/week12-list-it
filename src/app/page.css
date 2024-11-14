@@ -3,33 +3,7 @@ body {
   font-family: "Comfortaa", sans-serif;
   position: relative;
 }
-footer {
-  text-align: center;
-  padding: 1em;
-  max-width: 80px;
-  position: fixed;
-  top: 0;
-  right: 25px;
-}
-footer a {
-  text-decoration: none;
-  display: inline-block;
-  width: 45px;
-  height: 45px;
-  border-radius: 50%;
-  background: transparent;
-  border: 1px dashed #fff;
-  color: #fff;
-  margin: 5px;
-}
-footer a:hover {
-  background: rgba(255, 255, 255, 0.1);
-}
-footer a .icons {
-  margin-top: 12px;
-  display: inline-block;
-  font-size: 20px;
-}
+
 * {
   box-sizing: border-box;
 }
@@ -78,8 +52,8 @@ h1 {
   grid: repeat(3, 1fr) / repeat(3, 1fr);
   background: yellow;
   padding: 12em;
-  padding-top: 6em;
-  padding-bottom: 19em;
+  padding-top: 4em;
+  padding-bottom: 26em;
   background: url("https://cdn.pixabay.com/photo/2017/06/06/22/46/mediterranean-cuisine-2378758_1280.jpg")
     no-repeat center center / cover;
 }
@@ -89,7 +63,7 @@ h1 {
   left: 0;
   right: 0;
   top: 50%;
-  margin-top: -160px;
+  margin-top: -240px;
   transition: 1s ease;
   z-index: 0;
   letter-spacing: 25px;
@@ -99,14 +73,14 @@ h1 {
 }
 .concept-one .hover-1:hover ~ h1 {
   left: 130px;
-  margin-top: -110px;
+  margin-top: -190px;
 }
 .concept-one .hover-2:hover ~ h1 {
-  margin-top: -110px;
+  margin-top: -190px;
 }
 .concept-one .hover-3:hover ~ h1 {
   right: 130px;
-  margin-top: -110px;
+  margin-top: -190px;
 }
 .concept-one .hover-4:hover ~ h1 {
   left: 130px;
@@ -116,14 +90,14 @@ h1 {
 }
 .concept-one .hover-7:hover ~ h1 {
   left: 130px;
-  margin-top: -210px;
+  margin-top: -290px;
 }
 .concept-one .hover-8:hover ~ h1 {
-  margin-top: -210px;
+  margin-top: -290px;
 }
 .concept-one .hover-9:hover ~ h1 {
   right: 130px;
-  margin-top: -210px;
+  margin-top: -290px;
 }
 
 .title {

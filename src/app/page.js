@@ -49,8 +49,6 @@ export default function Home() {
             <li>Saves your favourites for later</li>
           </ul>
           {/* <p>Discover delicious ways to eat healthier with List It!</p> */}
-
-          <div className=""></div>
         </div>
       </div>
     </div>

@@ -9,7 +9,7 @@
   justify-items: center;
 }
 
-.instructions {
+.instructions2 {
   grid-area: 2 / 1 / 3 / 3;
   border-style: solid;
   border-color: white;
@@ -18,7 +18,7 @@
   margin: 20px;
 }
 
-.recipes-container {
+.recipes-container2 {
   /* width: 100vw; */
 
   display: flex;
@@ -26,7 +26,7 @@
   align-items: center;
 }
 
-.recipe-card {
+.recipe-card2 {
   background: RGB(249 115 22);
   border-radius: 8px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
@@ -36,11 +36,11 @@
   width: 60vw;
 }
 
-.recipe-card:hover {
+.recipe-card2:hover {
   transform: scale(1.03);
 }
 
-.recipe-image {
+.recipe-image2 {
   /* display: flex;
   align-items: center;
   justify-content: center; */
@@ -51,7 +51,7 @@
   grid-area: 1 / 1 / 2 / 2;
 }
 
-.card-content {
+.card-content2 {
   padding: 15px;
   grid-area: 1 / 2 / 2 / 3;
   border-style: solid;
@@ -59,7 +59,7 @@
   border-width: 2px;
 }
 
-.recipe-name {
+.recipe-name2 {
   font-size: 1.25rem;
   font-weight: bold;
   margin-top: 10px;
@@ -67,11 +67,11 @@
   text-decoration: none;
 }
 
-.recipe-name:hover {
+.recipe-name2:hover {
   text-decoration: underline;
 }
 
-.cook-time {
+.cook-time2 {
   font-size: 1rem;
   color: #ffffff;
   margin: 5px 0;

@@ -9,9 +9,11 @@ import AddFavourite from "./FavouriteServer";
 export default function FavouriteButton({ recipe_id }) {
   // const [btnClass, setBtnClass] = useState(false);
   const [btnColor, setBtnColor] = useState("white");
+  const [isClicked, setIsClicked] = useState(false);
 
   const handleFavouriteSubmit = async () => {
     setBtnColor(btnColor === "white" ? "red" : "white");
+    setIsClicked(true);
 
     await AddFavourite(recipe_id);
   };
@@ -21,6 +23,7 @@ export default function FavouriteButton({ recipe_id }) {
         type="submit"
         className="btn"
         onClick={handleFavouriteSubmit}
+        disabled={isClicked}
         style={{ backgroundColor: btnColor }}
       >
         <svg

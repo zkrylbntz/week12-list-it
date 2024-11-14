@@ -23,7 +23,7 @@ WHERE user_clerk_id = $1 AND  session_id = $2 ;`,
 
   return (
     <div className="flex flex-col items-center text-white">
-      <div className="card  bg-orange-600 w-96 shadow-xl">
+      <div className="card  bg-orange-500 w-96 shadow-xl">
         <h2 className="card-title justify-center px-6 py-3 text-2xl">
           Ingredients List
         </h2>

@@ -61,28 +61,36 @@ pg, Daisy UI, tailwindcss, clerk
 
 [x] As a user, I would like to search for recipes
 
-[] As a user, I would like to add or remove individual ingredients from my shopping list
+[ ] As a user, I would like to add or remove individual ingredients from my shopping list
 
-[] As a user, I would like the ingredients on my list to consolidate and duplicates (updated the amounts needed)
+[ ] As a user, I would like the ingredients on my list to consolidate and duplicates (updated the amounts needed)
 
-[] As a user, I would like to be able to switch between light and dark themes
+[ ] As a user, I would like to be able to switch between light and dark themes
 
-[] As a user, I would like to change the servings and this adjust the ingredient amounts needed
+[ ] As a user, I would like to change the servings and this adjust the ingredient amounts needed
 
-[] As a user, I would like to be able to view previous weekly shops
+[ ] As a user, I would like to be able to view previous weekly shops
 
 ### References and resources used:
 
-Data originated from https://dummyjson.com/recipes
-We used https://chatgpt.com/ to help rework the data adding and removing items to fit our app
+Data originated from https://dummyjson.com/recipes we used https://chatgpt.com/ to help rework the data adding and removing items to fit our app
+
 Images from https://unsplash.com/ and https://pixabay.com/
+
 Tech Educators https://techeducators.co.uk/
+
 https://daisyui.com/
+
 https://drawsql.app/
+
 https://okso.app/
+
 https://excalidraw.com/
+
 https://cssgrid-generator.netlify.app/
+
 https://blog.hubspot.com/
+
 https://www.markdownguide.org/cheat-sheet/
 
 ### Errors and bugs we encountered while creating our app:
@@ -97,4 +105,5 @@ Known bugs:
 
 - Favourite and Basket buttons do not stay clicked in when user refreshes page
 - When you go to the list page without having started a session you will get an error
+
   _(mostly able to be fixed by using local storage)_

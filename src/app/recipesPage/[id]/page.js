@@ -28,13 +28,13 @@ export default async function SingleRecipePage({ params }) {
       <br />
 
       <div className="recipes-container">
-        <div className="recipe-card">
+        <div key={recipe.id} className="recipe-card">
           {recipes.map((recipe) => (
             <>
               <div>
                 <h2 className="text-white text-4xl p-5 m-5">{recipe.name}</h2>
               </div>
-              <div key={recipe.id} className="sibling">
+              <div className="sibling">
                 {/* <div className="image"> */}
                 <Image
                   src={recipe.image}

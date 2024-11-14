@@ -28,7 +28,7 @@ export default async function SingleRecipePage({ params }) {
       <br />
 
       <div className="recipes-container">
-        <div key={recipe.id} className="recipe-card">
+        <div key={recipes.id} className="recipe-card">
           {recipes.map((recipe) => (
             <>
               <div>

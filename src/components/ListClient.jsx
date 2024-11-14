@@ -1,10 +1,10 @@
-import Image from "next/image";
+// import Image from "next/image";
 import { db } from "@/utils/dbConnection";
 import { auth } from "@clerk/nextjs/server";
 import getCurrentSessionId from "@/utils/currentSession";
 import Link from "next/link";
 
-import "./listclient.css";
+// import "./listclient.css";
 
 export default async function List() {
   const { userId } = await auth();
@@ -20,6 +20,7 @@ WHERE user_clerk_id = $1 AND  session_id = $2 ;`,
 
   const recipes = recipes_results.rows;
   return (
+
     <div className="card bg-base-100 w-96 shadow-xl">
       {recipes.length > 0 ? (
         <div className="content-container">
@@ -70,5 +71,56 @@ WHERE user_clerk_id = $1 AND  session_id = $2 ;`,
         </div>
       )}
     </div>
+
+    // <div className="content-container">
+    // {recipes.map((recipe) => {
+    //   return (
+    //     <div className="content" key={recipe.id}>
+    //       {recipe.ingredients.map((ingredient) => {
+    //         return (
+    //           <ul
+    //             className="list-text"
+    //             key={recipe.id + "-" + ingredient.name}
+    //           >
+    //             <li>
+    //               <input type="checkbox" className="checkbox" />
+    //               &nbsp;&nbsp;
+    //               {ingredient.amount} {ingredient.name} {ingredient.prep}
+    //             </li>
+    //           </ul>
+    //         );
+    //       })}
+    //     </div>
+    //   );
+    // })}
+    // </div>
+    <>
+      <div className="flex flex-col items-center">
+        <div className="card bg-orange-800 w-96 shadow-xl">
+          <div className="card-body">
+            <h2 className="card-title">Ingredients List</h2>
+            {recipes.map((recipe) => {
+              return (
+                <div key={recipe.id}>
+                  {recipe.ingredients.map((ingredient) => {
+                    return (
+                      <ul key={recipe.id + "-" + ingredient.name}>
+                        <li>
+                          <input type="checkbox" className="checkbox" />
+                          &nbsp;&nbsp;
+                          {ingredient.amount} {ingredient.name}{" "}
+                          {ingredient.prep}
+                        </li>
+                      </ul>
+                    );
+                  })}
+                </div>
+              );
+            })}
+          </div>
+        </div>
+      </div>
+    </>
+
   );
 }

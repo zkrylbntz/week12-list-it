@@ -1,3 +1,4 @@
+//this is the home page
 import "./page.css";
 import Image from "next/image";
 

@@ -11,6 +11,8 @@ export default function BasketButton({ recipe_id }) {
   const [btnColor, setBtnColor] = useState("white");
   const [isClicked, setIsClicked] = useState(false);
 
+  //this function changes the colour of the basket button and keeps it selected
+  //when a user refreshes, it does not state seleted, local storage will need to be used to fix this
   const handleWeeklyShop = async () => {
     setBtnColor(btnColor === "white" ? "green" : "white");
     setIsClicked(true);

@@ -9,12 +9,6 @@ export default function ListIngredients() {
       <br />
       <br />
       <br />
-      {/* 
-      <div className="flex flex-col items-center">
-        <button className="btn btn-active btn-primary text-4xl">
-          Ingredients List
-        </button>
-      </div> */}
       <List />
     </>
   );

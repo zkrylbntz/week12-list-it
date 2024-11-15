@@ -8,6 +8,7 @@ import CheckChecked from "@/components/CheckChecked"; // Import CheckChecked
 export default async function CreateProfilePage() {
   const { userId } = await auth();
 
+  //function to get user submitted data
   async function handleSubmit(formValues) {
     "use server";
     const username = formValues.get("user_name");

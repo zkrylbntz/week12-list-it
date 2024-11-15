@@ -1,3 +1,4 @@
+//error page including error message
 "use client";
 import Link from "next/link";
 import Image from "next/image";

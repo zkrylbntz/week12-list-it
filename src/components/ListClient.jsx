@@ -1,4 +1,3 @@
-// import Image from "next/image";
 import { db } from "@/utils/dbConnection";
 import { auth } from "@clerk/nextjs/server";
 import getCurrentSessionId from "@/utils/currentSession";

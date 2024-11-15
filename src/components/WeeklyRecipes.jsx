@@ -73,6 +73,7 @@ WHERE user_clerk_id = $1 AND  session_id = $2 ;`,
           ))}
         </div>
       ) : (
+        //this optional return renders when a user has not added any recipes to thier weekly meals
         <div className="card bg-base-100 shadow-lg rounded-lg w-96 overflow-hidden text-center">
           <figure>
             <Image

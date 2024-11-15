@@ -1,3 +1,4 @@
+//this page renders the users favourite recipes
 import { db } from "@/utils/dbConnection";
 import Image from "next/image";
 import Link from "next/link";
@@ -5,6 +6,7 @@ import { redirect } from "next/navigation";
 import { revalidatePath } from "next/cache";
 import { auth } from "@clerk/nextjs/server";
 
+//function to select the current logged in users favourites
 export default async function Favourites() {
   const { userId } = await auth();
   const recipes = (
@@ -14,6 +16,7 @@ export default async function Favourites() {
     )
   ).rows;
 
+  //function to delete a favourite
   async function handleDelete(formValues) {
     "use server";
     const recipe_id = formValues.get("id");
@@ -66,6 +69,7 @@ export default async function Favourites() {
           ))}
         </div>
       ) : (
+        //this optional return renders when a user has not favourited any recipes
         <div className="card bg-base-100 shadow-lg rounded-lg w-96 overflow-hidden text-center">
           <figure>
             <Image

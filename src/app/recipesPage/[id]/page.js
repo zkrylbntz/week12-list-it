@@ -1,9 +1,11 @@
+//this is a dynamic route for individual recipes
 import { db } from "@/utils/dbConnection";
 import Image from "next/image";
 import "./page.css";
 import { redirect } from "next/navigation";
 import { revalidatePath } from "next/cache";
 
+//metadata to adjust the tab name
 export async function generateMetadata({ params }) {
   const myParams = await params;
 
@@ -44,11 +46,8 @@ export default async function SingleRecipePage({ params }) {
       </div>
       <br />
 
-
       <div className="recipes-container2">
         <div className="recipe-card2">
-
-
           {recipes.map((recipe) => (
             <div key={recipes.id}>
               <div>

@@ -54,6 +54,8 @@ pg, Daisy UI, tailwindcss, clerk
 
 ### Lighthouse report:
 
+Wireframe: ![screenshot of lighthouse report for recipe page](./public/recipesPage.png)
+
 ### Reflections:
 
 **Additional features:**
@@ -96,7 +98,7 @@ https://www.markdownguide.org/cheat-sheet/
 
 ### Errors and bugs we encountered while creating our app:
 
-- key prop indentifiers when adding data to the database
+- key prop identifiers when adding data to the database
 - inherited CSS properties being carried over
 - incorrect recipe tags
 - errors related to database data types like jsonb
@@ -104,7 +106,16 @@ https://www.markdownguide.org/cheat-sheet/
 
 Known bugs:
 
-- Favourite and Basket buttons do not stay clicked in when user refreshes page
-- When you go to the list page without having started a session you will get an error
+- Favourite and Basket buttons do not stay clicked in when user refreshes page  
+  _(should be able to be fixed by using local storage)_
+- When you go to the list page without having started a session you will get an error  
+  _(should be able to be fixed by rewriting some of the sql queries in our code)_
 
-  _(mostly able to be fixed by using local storage)_
+### How to run this app yourself:
+
+- clone this repo (this is a nextJS application)
+- npm install (to install the packages mentioned above)
+- set up your database (supabase) and add **your** environment variables to a .env.local file
+- use our seed.sql to set up your tables and seed your database
+- npm run dev
+- Enjoy!

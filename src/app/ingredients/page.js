@@ -1,3 +1,4 @@
+//this page was built for future use, to allow developers to add an ingredients list that the user can add individual items to their shopping list
 import Link from "next/link";
 import Image from "next/image";
 

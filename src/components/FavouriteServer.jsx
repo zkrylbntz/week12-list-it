@@ -7,6 +7,7 @@ export default async function AddFavourite(recipe_id) {
   const { userId } = await auth();
   console.log(recipe_id);
 
+  //gets the favourites that are linked to the logged in user
   const existingFavourite = await db.query(
     `SELECT * FROM favourites WHERE user_clerk_id = $1 AND recipe_id = $2`,
     [userId, recipe_id]
